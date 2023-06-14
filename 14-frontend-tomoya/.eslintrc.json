@@ -1,6 +1,16 @@
 {
+  "env" : {
+    "browser" : true,
+    "es2022" : true
+  },
+  // "plugins" : [
+  //   "next"
+  // ],
   "extends": "next/core-web-vitals",
   "rules": {
-    "semi": ["error","always"]
+    "semi": ["error","always"],
+    "quotes" : ["error","double"],
+    "no-undef": ["error"],
+    "react/props-types" : "error"
   }
 }
