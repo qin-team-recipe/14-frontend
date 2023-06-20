@@ -2,26 +2,27 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
-  extends: "plugin:react/recommended",
-  overrides: [
-    {
-      env: {
-        node: true,
-      },
-      files: [".eslintrc.{js,cjs}"],
-      parserOptions: {
-        sourceType: "script",
-      },
-    },
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
   ],
   parserOptions: {
-    ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react"],
   rules: {
-    semi: ["error", "always"],
-    quotes: ["error", "double"],
+    "no-undef": ["error"],
+    "react/prop-types": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "no-var": "error",
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
   },
 };
