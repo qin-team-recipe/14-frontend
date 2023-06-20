@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint --ext .jsx,.js . --fix"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
@@ -17,7 +17,11 @@
   "devDependencies": {
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "postcss": "8.4.24",
+    "prettier": "^2.8.8",
     "tailwindcss": "3.3.2"
   }
 }
