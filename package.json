@@ -8,10 +8,10 @@
     "start": "next start",
     "lint": "run-p --continue-on-error lint:*",
     "lint:eslint": "eslint --ext .jsx,.js .",
-    "lint:prettier": "PRETTIER --check .",
+    "lint:prettier": "prettier --check .",
     "fix": "run-s --continue-on-error fix:eslint fix:prettier",
     "fix:eslint": "eslint --ext .jsx,.js . --fix",
-    "fix:prettier": "PRETTIER --write ."
+    "fix:prettier": "prettier --write ."
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
