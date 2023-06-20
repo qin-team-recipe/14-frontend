@@ -1,11 +1,11 @@
 {
-  "env" : {
-    "browser" : true,
-    "es2022" : true,
-    "node" : true
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "node": true
   },
-  "parserOptions" : {
-    "sourceType" : "module"
+  "parserOptions": {
+    "sourceType": "module"
   },
   "extends": [
     "next/core-web-vitals",
@@ -14,12 +14,12 @@
     "plugin:jsx-a11y/recommended"
   ],
   "rules": {
-    "quotes" : "error",
+    "quotes": "error",
     "no-undef": "error",
-    "react/prop-types" : "error",
-    "react/jsx-props-no-spreading" : "off"
+    "react/prop-types": "error",
+    "react/jsx-props-no-spreading": "off"
   },
   "settings": {
-    "version" : "detect"
+    "version": "detect"
   }
 }
