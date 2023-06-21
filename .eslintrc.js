@@ -1,28 +1,11 @@
 module.exports = {
   env: {
-    browser: true,
-    es2021: true,
-    node: true,
+    es2022: true,
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
-    "prettier",
-  ],
-  parserOptions: {
-    sourceType: "module",
-  },
+  extends: ["next/core-web-vitals", "prettier"],
   rules: {
-    "no-undef": ["error"],
-    "react/prop-types": ["off"],
-    "react/jsx-props-no-spreading": ["off"],
-    "no-var": "error",
-  },
-  settings: {
-    react: {
-      version: "detect",
-    },
+    "no-undef": "error",
+    "react/prop-types": "error",
+    "react/jsx-props-no-spreading": "off",
   },
 };
