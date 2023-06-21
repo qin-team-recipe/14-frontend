@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "cSpell.words": ["ianvs", "tailwindcss"],
+  // 拡張機能のTailwind CSS IntelliSenseをインストールしたうえで以下を記載
+  // @tailwind base;などの「@tailwind」でESlintに怒られなくなる
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}
