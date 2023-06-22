@@ -2,8 +2,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  //下記コードの意味はわかりませんが、なくても動くため念の為コメントアウトします。
-  // "eslint.validate": ["javascript"],
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
