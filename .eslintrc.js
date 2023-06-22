@@ -19,6 +19,8 @@ module.exports = {
     "react/prop-types": ["off"],
     "react/jsx-props-no-spreading": ["off"],
     "no-var": "error",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
   },
   settings: {
     react: {
