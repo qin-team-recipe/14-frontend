@@ -1,0 +1,13 @@
+{
+  //eslintの設定
+  //--ここから--ファイルを保存するときに ESLint でエラーを修正する設定
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"],
+//--ここまで--
+  //prettierの設定
+  "editor.formatOnSave": true,
+  //標準フォーマッターをprettierに設定
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
