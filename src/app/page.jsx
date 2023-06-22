@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <>
-      <p>はろー</p>
-    </>
+    <div>
+      <p className="text-red-500">はろー</p>
+    </div>
   );
 }
