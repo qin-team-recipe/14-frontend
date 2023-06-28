@@ -1,6 +1,7 @@
 import Image from "next/image";
 export function MainNav() {
   return (
+    // pcサイズの見た目だけしかできてません
     <div className="sticky top-0 w-36">
       <nav>
         <ul className="flex font-sans flex-col">
