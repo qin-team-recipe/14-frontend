@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import { MainNav } from "@/components/MainNav/page";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -11,7 +12,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className=" flex flex-col items-center ">
+          <div className="flex">
+            {/* ↓stickyが効かない対策のdiv*/}
+            <div>
+              <MainNav />
+            </div>
+            {/* スクロール確認用のh-[1000px] */}
+            <main className="h-[1000px] border">{children}</main>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
