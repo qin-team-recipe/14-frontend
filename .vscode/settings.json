@@ -5,7 +5,9 @@
     "source.fixAll.eslint": true
   },
   // 拡張機能のTailwind CSS IntelliSenseをインストールしたうえで以下を記載
-  // @tailwind base;などの「@tailwind」でESlintに怒られなくなる
+  // @tailwind base;などの「@tailwind」でESlintに怒られなくなる。
+
+  // jsやjson拡張子にも効かせたいが、拡張子を追加すると別のエラーが出るため一旦このまま。
   "files.associations": {
     "*.css": "tailwindcss"
   },
