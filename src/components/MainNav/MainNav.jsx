@@ -1,33 +1,37 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Search } from "tabler-icons-react";
+import { Heart } from "tabler-icons-react";
+import { ShoppingCart } from "tabler-icons-react";
 export function MainNav() {
   return (
     // pcサイズの見た目だけしかできてません
     <div className="sticky top-0 w-36">
       <nav>
-        <ul className="flex font-sans flex-col">
+        <ul className="flex flex-col font-sans">
           <li className="p-5">ロゴ</li>
           <li>
-            <button className="flex items-center gap-x-2 rounded-3xl p-3 hover:bg-gray-100">
-              <Image src="/search.svg" alt="search" width={24} height={24} />
+            <Link
+              href="/"
+              className="flex items-center gap-x-2 rounded-3xl p-3 hover:bg-gray-100"
+            >
+              <Search size={24} strokeWidth={1} color={"black"} />
               <div>さがす</div>
-            </button>
+            </Link>
           </li>
           <li>
-            <button className="flex items-center gap-x-2 rounded-3xl p-3 hover:bg-gray-100">
-              <Image src="/heart.svg" alt="heart" width={24} height={24} />
+            <Link
+              href="/favoriteSearch"
+              className="flex items-center gap-x-2 rounded-3xl p-3 hover:bg-gray-100"
+            >
+              <Heart size={24} strokeWidth={1} color={"black"} />
               <div>お気に入り</div>
-            </button>
+            </Link>
           </li>
           <li>
-            <button className="flex items-center gap-x-2 rounded-3xl p-3 hover:bg-gray-100">
-              <Image
-                src="/shopping-cart.svg"
-                alt="cart"
-                width={24}
-                height={24}
-              />
+            <Link href="/shoppingList" className="flex items-center gap-x-2 rounded-3xl p-3 hover:bg-gray-100">
+              <ShoppingCart size={24} strokeWidth={1} color={"black"} />
               <div>買い物リスト</div>
-            </button>
+            </Link>
           </li>
         </ul>
       </nav>
