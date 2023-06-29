@@ -5,7 +5,7 @@ import { ShoppingCart } from "tabler-icons-react";
 export function MainNav() {
   return (
     // pcサイズの見た目だけしかできてません
-    <div className="sticky top-0 w-36">
+    <div className="sticky top-0 w-36 mr-5">
       <nav>
         <ul className="flex flex-col font-sans">
           <li className="p-5">ロゴ</li>
