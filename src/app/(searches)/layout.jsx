@@ -1,4 +1,3 @@
-import "@/app/globals.css";
 import { MainNav } from "@/components/MainNav/MainNav";
 
 
