@@ -4,6 +4,7 @@ module.exports = {
     "eslint:recommended",
     // nextの推奨ルールのため必要
     "next/core-web-vitals",
+    "plugin:tailwindcss/recommended",
     // ESLintにはコードの書式設定ルールも含まれており、競合する可能性があるため必要
     "prettier",
   ],
