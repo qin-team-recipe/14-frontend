@@ -1,8 +1,9 @@
 
 export default function Home() {
   return (
+    //mainのpだとずれるためmxに変えています
     <div>
-      <input className="mx-4  mt-3 w-108 bg-gray-100" type="text" />
+      <input className="sm:mx-4 sm:w-108 sm:mt-4 bg-gray-100 w-full rounded-lg" type="text" />
     </div>
   );
 }
