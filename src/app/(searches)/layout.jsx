@@ -10,7 +10,7 @@ export default function Layout({ children }) {
         </div>
         {/* スクロール確認用のh-[1000px] */}
 
-        <main className="h-[1000px]  w-full p-3 sm:w-116 sm:border sm:p-0">
+        <main className="h-[1000px]  w-full sm:w-116 sm:border sm:p-0">
           {children}
         </main>
       </div>

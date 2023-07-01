@@ -26,7 +26,7 @@ export function MainNav() {
                 strokeWidth={`${pathname === "/" ? 2 : 1}`}
                 color={"black"}
               />
-              {/* urlが等しい時太字にしています */}
+              {/* 現在ページとurlが等しい時太字にしています */}
               <div
                 className={`${pathname === "/" ? "font-bold" : "font-sans"}`}
               >
