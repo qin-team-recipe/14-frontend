@@ -7,15 +7,19 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <div className="bg-blue-200 min-h-screen">
+    <div className="bg-blue-200">
       {/* ロゴ */}
       <div className="">ロゴ</div>
-      <Link href="/search">
-        <div className="flex">
-          <IconSearch />
-          <p>探す</p>
-        </div>
-      </Link>
+      <ul>
+        <li>
+          <Link href="/">
+            <div className="flex">
+              <IconSearch />
+              <p>探す</p>
+            </div>
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };
