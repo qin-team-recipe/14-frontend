@@ -1,48 +1,69 @@
 import "@/app/globals.css";
 import Link from "next/link";
-import { IconName } from "@tabler/icons";
+import { IconSearch, IconHeart, IconShoppingCart } from "@tabler/icons-react";
 
 // ナビゲーションは全ページに共通していないと思ったため、一つ階層を増やして設置。
 // また、全ページに共通しているものはないと判断したためtopのpage.jsxを削除し、searchをtop階層の替わりとする。
 export default function Layout({ children }) {
   return (
-    <div className="flex">
-      <div>
-        <h1>ロゴ</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-search"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-                  <path d="M21 21l-6 -6"></path>
-                </svg>
-                さがす
-              </Link>
-            </li>
-            <li>
-              <Link href="/favorite">お気に入り</Link>
-            </li>
-            <li>
-              <Link href="/list">買い物リスト</Link>
-            </li>
+    // <div className="mx-auto my-0 flex max-w-screen-sm flex-col sm:flex-row sm:gap-3">
+    //   <div className="fixed bottom-0 order-2 w-full sm:sticky sm:order-1">
+    //     <h1 className="hidden sm:block">ロゴ</h1>
+    //     <nav>
+    //       <ul className="flex flex-initial grow justify-between sm:flex-col">
+    //         <Link href="/">
+    //           <li className="flex">
+    //             <IconSearch />
+    //             <span>さがす</span>
+    //           </li>
+    //         </Link>
+    //         <Link href="/favorite">
+    //           <li className="flex">
+    //             <IconHeart />
+    //             <span>お気に入り</span>
+    //           </li>
+    //         </Link>
+    //         <Link href="/list">
+    //           <li className="flex">
+    //             <IconShoppingCart />
+    //             <span>買い物リスト</span>
+    //           </li>
+    //         </Link>
+    //       </ul>
+    //     </nav>
+    //     {/* ボーダーの設定 */}
+    //   </div>
+    //   <main className="order-1 sm:order-2">{children}</main>
+    // </div>
+
+    <div className="mx-auto my-0 flex min-h-screen max-w-screen-sm gap-3">
+      <div className="">
+        <h1 className="py-3">ロゴ</h1>
+        <nav className="">
+          <ul className="">
+            <Link href="/" className="block rounded-full  p-2">
+              <li className="flex">
+                <IconSearch />
+                <span className="ml-2">さがす</span>
+              </li>
+            </Link>
+            <Link href="/favorite" className="mt-2 block rounded-full p-2">
+              <li className="flex">
+                <IconHeart />
+                <span className="ml-2">お気に入り</span>
+              </li>
+            </Link>
+            <Link href="/list" className="mt-2 block rounded-full p-2">
+              <li className="flex">
+                <IconShoppingCart />
+                <span className="ml-2">買い物リスト</span>
+              </li>
+            </Link>
           </ul>
         </nav>
         {/* ボーダーの設定 */}
       </div>
-      <main>{children}</main>
+      <main className="flex-1 border-x py-3">{children}</main>
     </div>
   );
 }

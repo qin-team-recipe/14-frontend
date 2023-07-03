@@ -1,7 +1,7 @@
 import "@/app/globals.css";
 import { Inter } from "next/font/google";
 
-//フォントやテキストスタイルを設定するもの。おそらくラテン文字系が設定されているかも。
+//フォントやテキストスタイルを設定するもの。Interのlatinを使用していると思われる。
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
