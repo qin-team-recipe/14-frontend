@@ -1,8 +1,5 @@
 import "../app/globals.css";
 import { Inter } from "next/font/google";
-import Sidebar from "../app/components/Sidebar";
-
-// import {Sidebar} from "../app/components/Sidebar"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,10 +12,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ja">
       <body className={inter.className}>
-        <Sidebar />
-        {children}
         <div></div>
-      </body>
+        {children}</body>
+        <div></div>
     </html>
   );
 }
