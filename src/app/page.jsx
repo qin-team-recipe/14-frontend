@@ -1,7 +1,10 @@
+"use client";
+
 export default function Home() {
   return (
-    <>
-      <p className="text-red-500">はろー</p>
-    </>
+    <div className="flex">
+      <input className="w-full border" type="text" />
+      <button>Search</button>
+    </div>
   );
 }
