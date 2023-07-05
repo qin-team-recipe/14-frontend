@@ -2,7 +2,7 @@ import "../app/globals.css";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
-import Sidebar from "../app/components/Sidebar";
+import Sidebar from "./components/Sidebar";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,14 +13,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ja">
       <body className={inter.className}>
-        <div className="flex-ro flex justify-center">
-          <div className="w-1/3 sm:">
+        <div className="flex flex-row justify-center ">
+          <div className="w-screen sm:w-1/3 sm:border-r-2">
             <Sidebar />
           </div>
           <div className="w-1/3">{children}</div>
-          <div className="w-1/3 sm:hidden">
-            <h1>Hello world</h1>
-          </div>
+          <div className="w-1/3 sm:border-l-2 sm:h-screen"></div>
         </div>
       </body>
     </html>

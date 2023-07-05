@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <div className="z-15 fixed bottom-0 left-0 w-screen bg-blue-300 sm:left-0 sm:top-0 sm:mr-3 sm:w-36">
+    <div className="z-15 fixed bottom-0 left-0 w-screen bg-gray-50 sm:left-0 sm:top-0 sm:mr-3 sm:w-1/3 sm:border-r-2 sm:bg-white">
       <nav>
         <ul className="flex justify-around sm:flex-col">
           <li className="hidden sm:block">ロゴ</li>
