@@ -6,36 +6,6 @@ import { IconSearch, IconHeart, IconShoppingCart } from "@tabler/icons-react";
 // また、全ページに共通しているものはないと判断したためtopのpage.jsxを削除し、searchをtop階層の替わりとする。
 export default function Layout({ children }) {
   return (
-    // <div className="mx-auto my-0 flex max-w-screen-sm flex-col sm:flex-row sm:gap-3">
-    //   <div className="fixed bottom-0 order-2 w-full sm:sticky sm:order-1">
-    //     <h1 className="hidden sm:block">ロゴ</h1>
-    //     <nav>
-    //       <ul className="flex flex-initial grow justify-between sm:flex-col">
-    //         <Link href="/">
-    //           <li className="flex">
-    //             <IconSearch />
-    //             <span>さがす</span>
-    //           </li>
-    //         </Link>
-    //         <Link href="/favorite">
-    //           <li className="flex">
-    //             <IconHeart />
-    //             <span>お気に入り</span>
-    //           </li>
-    //         </Link>
-    //         <Link href="/list">
-    //           <li className="flex">
-    //             <IconShoppingCart />
-    //             <span>買い物リスト</span>
-    //           </li>
-    //         </Link>
-    //       </ul>
-    //     </nav>
-    //     {/* ボーダーの設定 */}
-    //   </div>
-    //   <main className="order-1 sm:order-2">{children}</main>
-    // </div>
-
     // tailwindcssの考え方は①スマホサイズの時どうなるか②大きくしたときにどうなるのか③バッティングしたら初期値を与える。「flex flex-col sm:flex-row」のように。
     <div className="mx-auto my-0 flex min-h-screen max-w-screen-sm flex-col-reverse gap-3 sm:flex-row">
       <div className="sticky bottom-0">
