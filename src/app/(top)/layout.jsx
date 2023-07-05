@@ -36,32 +36,35 @@ export default function Layout({ children }) {
     //   <main className="order-1 sm:order-2">{children}</main>
     // </div>
 
-    <div className="mx-auto my-0 flex min-h-screen max-w-screen-sm gap-3">
-      <div className="">
-        <h1 className="py-3">ロゴ</h1>
-        <nav className="">
-          <ul className="">
-            <Link href="/" className="block rounded-full  p-2">
-              <li className="flex">
-                <IconSearch />
-                <span className="ml-2">さがす</span>
-              </li>
-            </Link>
-            <Link href="/favorite" className="mt-2 block rounded-full p-2">
-              <li className="flex">
-                <IconHeart />
-                <span className="ml-2">お気に入り</span>
-              </li>
-            </Link>
-            <Link href="/list" className="mt-2 block rounded-full p-2">
-              <li className="flex">
-                <IconShoppingCart />
-                <span className="ml-2">買い物リスト</span>
-              </li>
-            </Link>
-          </ul>
-        </nav>
-        {/* ボーダーの設定 */}
+    // tailwindcssの考え方は①スマホサイズの時どうなるか②大きくしたときにどうなるのか③バッティングしたら初期値を与える。「flex flex-col sm:flex-row」のように。
+    <div className="mx-auto my-0 flex min-h-screen max-w-screen-sm flex-col-reverse gap-3 sm:flex-row">
+      <div className="sticky bottom-0">
+        <div className="sticky bottom-0 border-t sm:top-0 sm:border-0">
+          <h1 className="ml-2 hidden py-3 sm:block">ロゴ</h1>
+          <nav className="text-xs sm:text-base">
+            <ul className="flex sm:flex-col">
+              {/* rounded-fullはborder-radiusのこと。 */}
+              <Link href="/" className="block flex-1 p-2 hover:bg-gray-200 sm:rounded-full">
+                <li className="flex flex-col items-center sm:flex-row">
+                  <IconSearch />
+                  <span className="sm:ml-2">さがす</span>
+                </li>
+              </Link>
+              <Link href="/favorite" className="block flex-1 p-2 hover:bg-gray-200 sm:mt-2 sm:rounded-full">
+                <li className="flex flex-col items-center sm:flex-row">
+                  <IconHeart />
+                  <span className="sm:ml-2">お気に入り</span>
+                </li>
+              </Link>
+              <Link href="/list" className="block flex-1 p-2 hover:bg-gray-200 sm:mt-2 sm:rounded-full">
+                <li className="flex flex-col items-center sm:flex-row">
+                  <IconShoppingCart />
+                  <span className="sm:ml-2">買い物リスト</span>
+                </li>
+              </Link>
+            </ul>
+          </nav>
+        </div>
       </div>
       <main className="flex-1 border-x py-3">{children}</main>
     </div>
