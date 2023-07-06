@@ -36,7 +36,7 @@ export default function Layout({ children }) {
           </nav>
         </div>
       </div>
-      <main className="flex-1 border-x py-3">{children}</main>
+      <main className="flex-1 border-x">{children}</main>
     </div>
   );
 }
