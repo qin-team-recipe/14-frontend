@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <p className="text-red-500">はろー</p>
+      <div className="text-red-500">デフォルトページです</div>
     </>
   );
 }

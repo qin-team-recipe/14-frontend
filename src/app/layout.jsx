@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import { Navigation } from "./_components/Navigation";
 
 export const metadata = {
   title: "Create Next App",
@@ -8,7 +9,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <div className="mx-auto flex min-h-screen sm:max-w-2xl sm:gap-x-3 sm:px-4">
+          <Navigation />
+          <div>{children}</div>
+        </div>
+      </body>
     </html>
   );
 }
