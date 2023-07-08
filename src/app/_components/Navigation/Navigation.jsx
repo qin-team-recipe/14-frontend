@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   IconChefHat,
   IconHeart,
@@ -10,8 +13,8 @@ import {
 export const Navigation = () => {
   return (
     // sm以上でナビゲーションを固定する方法については模索中
-    <nav className="fixed bottom-0 z-10 sm:sticky sm:w-auto">
-      <div className="flex flex-col gap-10 p-5 sm:w-60 ">
+    <nav className="fixed bottom-0 z-10 w-full sm:sticky sm:w-auto">
+      <div className="flex flex-col gap-10 p-5 sm:w-48 ">
         {/* ロゴ（PCサイズで表示） */}
         <div className="hidden sm:block">
           <div className="flex items-center gap-2.5">
@@ -27,7 +30,7 @@ export const Navigation = () => {
           <NavigationItem
             text="買い物リスト"
             icon={<IconShoppingCart />}
-            href="list"
+            href="/list"
           />
         </div>
       </div>
@@ -37,10 +40,14 @@ export const Navigation = () => {
 
 // ナビゲーションアイテム
 const NavigationItem = ({ text, icon, href }) => {
+  // hrefと現在のパスが一致している場合にtrueを返す
+  const isActive = usePathname() === href;
+
   return (
     <Link
       href={href}
-      className="flex w-full flex-col items-center gap-y-1 hover:border-slate-100 sm:flex-row sm:space-x-2 sm:rounded-full sm:py-1.5 sm:hover:bg-slate-100"
+      className={`flex w-full flex-col items-center gap-y-1 hover:border-slate-100 sm:flex-row sm:space-x-2 sm:rounded-full sm:px-3 sm:py-1.5 sm:hover:bg-slate-100
+      sm:active:bg-slate-100 ${isActive ? "font-bold" : ""}`}
     >
       <div className="h-6 w-6">{icon}</div>
       <div className="text-xs sm:text-base">{text}</div>
