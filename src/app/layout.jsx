@@ -10,9 +10,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ja">
       <body>
-        <div className="mx-auto flex min-h-screen sm:max-w-2xl sm:gap-x-3 sm:px-4">
+        <div className="mx-auto flex min-h-screen sm:max-w-2xl sm:gap-x-5 sm:px-4">
           <Navigation />
-          <div>{children}</div>
+          <main className="w-full overflow-hidden border-gray-200 pb-5 sm:border-x">
+            {children}
+          </main>
         </div>
       </body>
     </html>
