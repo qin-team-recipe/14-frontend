@@ -32,3 +32,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## scripts について
+
+```js
+"scripts": {
+    //開発中の変更をリアルタイムで確認できる。buildではリアルタイムで確認はできないが、ビルドしてくれるので処理が早くなる。
+    "dev": "next dev",
+    //build実行について。（https://qiita.com/bell_007/items/e84cd7a11b1d196e8bb4）
+    "build": "next build",
+    "start": "next start",
+    "lint": "run-p --continue-on-error lint:*",
+    "lint:eslint": "next lint",
+    "lint:prettier": "prettier --check .",
+    "fix": "run-s --continue-on-error fix:eslint fix:prettier",
+    "fix:eslint": "next lint --fix",
+    "fix:prettier": "prettier --write ."
+  },
+```
