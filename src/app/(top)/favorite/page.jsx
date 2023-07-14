@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { IconSettings } from "@tabler/icons-react";
+
 export default function Home() {
   return (
     <div className="p-2 sm:mx-3 sm:mt-3">

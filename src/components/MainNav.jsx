@@ -6,7 +6,6 @@ import { IconSearch, IconHeart, IconShoppingCart } from "@tabler/icons-react";
 export function MainNav() {
   // pathnameで現在のurlを取得
   const pathname = usePathname();
-  console.log(pathname);
   return (
     // fixedにしてbottomを効かせて、w-screenでborderを画面横全体に引く＋j-aroundを効かせる
     <div className="fixed bottom-0 left-0 z-50 w-screen sm:sticky sm:top-0 sm:mr-3 sm:w-36">
