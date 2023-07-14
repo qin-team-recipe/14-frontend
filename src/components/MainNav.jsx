@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { IconHeart } from "@tabler/icons-react";
-import { IconShoppingCart } from "@tabler/icons-react";
-import { IconSearch } from "@tabler/icons-react";
+import { IconSearch, IconHeart, IconShoppingCart } from "@tabler/icons-react";
 
 export function MainNav() {
   // pathnameで現在のurlを取得
@@ -24,11 +22,7 @@ export function MainNav() {
               <IconSearch stroke={`${pathname === "/" ? 2 : 1}`} />
 
               {/* 現在ページとurlが等しい時太字にしています */}
-              <div
-                className={`${pathname === "/" ? "font-bold" : "font-sans"}`}
-              >
-                さがす
-              </div>
+              <div className={`${pathname === "/" ? "font-bold" : "font-sans"}`}>さがす</div>
             </Link>
           </li>
           <li>
@@ -38,11 +32,7 @@ export function MainNav() {
             >
               <IconHeart stroke={`${pathname === "/favorite" ? 2 : 1}`} />
 
-              <div
-                className={`${
-                  pathname === "/favorite" ? "font-bold" : "font-sans"
-                }`}
-              >
+              <div className={`${pathname === "/favorite" ? "font-bold" : "font-sans"}`}>
                 お気に入り
               </div>
             </Link>
@@ -55,9 +45,7 @@ export function MainNav() {
               <IconShoppingCart stroke={`${pathname === "/list" ? 2 : 1}`} />
 
               <div
-                className={`whitespace-nowrap ${
-                  pathname === "/list" ? "font-bold" : "font-sans"
-                }`}
+                className={`whitespace-nowrap ${pathname === "/list" ? "font-bold" : "font-sans"}`}
               >
                 買い物リスト
               </div>
