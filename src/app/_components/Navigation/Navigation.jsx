@@ -20,7 +20,7 @@ export const Navigation = () => {
 
       {/* ナビゲーションメニュー */}
       <div className="flex border-t pt-1 sm:flex-col sm:justify-start sm:space-y-2 sm:border-none">
-        <NavigationItem text="さがす" icon={<IconSearch />} href="/" />
+        <NavigationItem text="見つける" icon={<IconSearch />} href="/" />
         <NavigationItem text="お気に入り" icon={<IconHeart />} href="/fav" />
         <NavigationItem
           text="買い物リスト"

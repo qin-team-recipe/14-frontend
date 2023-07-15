@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 
 // ナビゲーションアイテム
 export const NavigationItem = ({ text, icon, href }) => {
-  console.log("clientです");
   // hrefと現在のパスが一致している場合にtrueを返す
   const isActive = usePathname() === href;
 
@@ -17,7 +16,7 @@ export const NavigationItem = ({ text, icon, href }) => {
         }`}
       >
         <div className="h-6 w-6">{icon}</div>
-        <div className="text-xs sm:text-base">{text}</div>
+        <span className="text-xs sm:text-base">{text}</span>
       </div>
     </Link>
   );
