@@ -1,7 +1,9 @@
+import { Title } from "./_components/title";
+
 export default function Top() {
   return (
     <div>
-      <h2 className="border-b py-3 text-center">トップページ</h2>
+      <Title text="トップページ" />
       <p className="h-96 w-96 text-red-500">トップページ</p>
       <p className="h-96 w-96 text-red-500">トップページ</p>
       <p className="h-96 w-96 text-red-500">トップページ</p>
