@@ -29,7 +29,7 @@ export function Menu() {
         const IconComponent = Navigation.icon;
         return (
           // rounded-fullはborder-radiusのこと。
-          <li key={Navigation.id} className="block flex-1 p-2 hover:bg-gray-200 sm:rounded-full">
+          <li key={Navigation.id} className="block flex-1 p-2 visited:bg-gray-200 hover:bg-gray-200 sm:rounded-full">
             <Link href={Navigation.url} className="flex flex-col items-center sm:flex-row">
               <IconComponent />
               <span className="sm:ml-2">{Navigation.text}</span>
