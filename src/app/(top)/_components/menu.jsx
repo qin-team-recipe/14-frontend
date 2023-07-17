@@ -1,12 +1,5 @@
 import Link from "next/link";
 import { IconSearch, IconHeart, IconShoppingCart } from "@tabler/icons-react";
-import { useState } from "react";
-
-const [weight, setWeight] = useState[true];
-
-const changeWeight = () => {
-  setWeight((weight) => !weight);
-};
 
 const Navigations = [
   {
@@ -36,11 +29,7 @@ export function Menu() {
         const IconComponent = Navigation.icon;
         return (
           // rounded-fullはborder-radiusのこと。
-          <li
-            key={Navigation.id}
-            className="block flex-1 p-2 hover:bg-gray-200 sm:rounded-full "
-            onClick={changeWeight}
-          >
+          <li key={Navigation.id} className="block flex-1 p-2 hover:bg-gray-200 sm:rounded-full">
             <Link href={Navigation.url} className="flex flex-col items-center sm:flex-row">
               <IconComponent />
               <span className="sm:ml-2">{Navigation.text}</span>
