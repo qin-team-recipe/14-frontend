@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { IconSearch, IconHeart, IconShoppingCart } from "@tabler/icons-react";
 
-const Navigations = [
+const navigations = [
   {
     url: "/",
     icon: IconSearch,
@@ -22,14 +22,14 @@ const Navigations = [
 export function Menu() {
   return (
     <ul className="flex sm:flex-col">
-      {Navigations.map((Navigation) => {
-        const IconComponent = Navigation.icon;
+      {navigations.map((navigation) => {
+        const IconComponent = navigation.icon;
         return (
           // rounded-fullはborder-radiusのこと。
-          <li key={Navigation.url} className="block flex-1 p-2 hover:bg-gray-200 sm:rounded-full">
-            <Link href={Navigation.url} className="flex flex-col items-center sm:flex-row">
+          <li key={navigation.url} className="block flex-1 p-2 hover:bg-gray-200 sm:rounded-full">
+            <Link href={navigation.url} className="flex flex-col items-center sm:flex-row">
               <IconComponent />
-              <span className="sm:ml-2">{Navigation.text}</span>
+              <span className="sm:ml-2">{navigation.text}</span>
             </Link>
           </li>
         );
