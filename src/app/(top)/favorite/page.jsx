@@ -1,4 +1,4 @@
-import { Title } from "../_components/title";
+import { Title } from "../_components/Title";
 
 export default function Favorite() {
   return (

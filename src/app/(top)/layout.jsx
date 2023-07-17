@@ -1,4 +1,4 @@
-import { Menu } from "./_components/menu";
+import { Menu } from "./_components/Menu";
 
 // ナビゲーションは全ページに共通していないと思ったため、一つ階層を増やして設置。
 export default function Layout({ children }) {
