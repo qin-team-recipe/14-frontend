@@ -5,8 +5,10 @@ import { usePathname } from "next/navigation";
 
 // ナビゲーションアイテム
 export const NavigationItem = ({ text, icon, href }) => {
-  // hrefと現在のパスが一致している場合にtrueを返す
-  const isActive = usePathname() === href;
+  // 現在のパス取得
+  const pathname = usePathname();
+  // 現在のパスとhrefが一致している場合はtrueを返す
+  const isActive = pathname === href;
 
   return (
     <Link href={href} className="flex-1 select-none">
