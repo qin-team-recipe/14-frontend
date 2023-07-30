@@ -1,16 +1,17 @@
+import PrevButton from "@/app/_components/PrevButton";
+import Sns from "@/app/_components/Sns";
+
 export default function Profile() {
   return (
     <>
-      <p className="text-red-500">プロフィール画面です</p>
-      <div>
-        {/* ミニヘッダー的な */}
-        <div>
-          {/* 戻る矢印 */}
-          {/* SNS */}
+      <div className="mx-auto min-h-screen sm:max-w-2xl px-4">
+        <div className="flex justify-between items-center h-10">
+          <PrevButton />
+          <Sns />
         </div>
 
-        {/* プロフィール詳細 */}
         <div>
+          {/* プロフィール詳細 */}
           <div>
             {/* 名前 */}
             {/* id名 */}
