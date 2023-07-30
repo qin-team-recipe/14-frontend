@@ -1,5 +1,7 @@
-import PrevButton from "@/app/_components/PrevButton";
-import Sns from "@/app/_components/Sns";
+import { PrevButton } from "@/app/_components/PrevButton";
+import { ProfileName } from "@/app/_components/ProfileName";
+import { ProfileImage } from "@/app/_components/ProfileImage";
+import { Sns } from "@/app/_components/Sns";
 
 export default function Profile() {
   return (
@@ -9,14 +11,11 @@ export default function Profile() {
           <PrevButton />
           <Sns />
         </div>
-
         <div>
-          {/* プロフィール詳細 */}
-          <div>
-            {/* 名前 */}
-            {/* id名 */}
+          <div className="flex justify-between items-center mt-4">
+            <ProfileName />
+            <ProfileImage />
           </div>
-          <div>{/* 画像 */}</div>
           <div>{/* 説明文 */}</div>
           <div>
             {/* レシピ数 */}
