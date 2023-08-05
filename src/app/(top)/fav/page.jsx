@@ -1,7 +1,7 @@
+import FavBar from "@/app/_components/favBar/favBar";
+
 export default function Fav() {
   return (
-    <>
-      <p className="text-red-500">お気に入りページ</p>
-    </>
+      <FavBar />
   );
 }
