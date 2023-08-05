@@ -1,4 +1,4 @@
-import FavBar from "@/app/_components/favBar/favBar";
+import FavBar from "@/app/_components/FavBar/FavBar";
 
 export default function Fav() {
   return (
