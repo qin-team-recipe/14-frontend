@@ -4,6 +4,9 @@ import { ProfileImage } from "@/app/_components/ProfileImage";
 import { Sns } from "@/app/_components/Sns";
 import { ProfileId } from "@/app/_components/ProfileId";
 import { IntroductionText } from "@/app/_components/IntroductionText";
+import { RecipesNumber } from "@/app/_components/recipesNumber";
+import { FollowerNumber } from "@/app/_components/followerNumber";
+import { Button } from "@/app/_components/button";
 
 export default function Profile() {
   return (
@@ -21,12 +24,13 @@ export default function Profile() {
           <ProfileImage />
         </div>
         <IntroductionText text="初の絵本出版！ 『 まねっこシェフ』 ・ふわふわ！スクランブルエッグ ・にぎにぎ！おにぎり 主婦の友社より３月３日、２冊同時発売！ 絶賛発売中！" />
-        <div>
-          {/* レシピ数 */}
-          {/* フォロワー数 */}
+        <div className="flex text-gray-500 mt-2">
+          <RecipesNumber />
+          <FollowerNumber />
         </div>
-
-        <div>{/* フォローボタン */}</div>
+        <div className="py-1 px-3">
+          <Button className="px-3" text="フォローする" />
+        </div>
       </div>
     </>
   );
