@@ -9,6 +9,7 @@ export default function FavBar() {
           <IconMenu stroke={1.5} />
         </li>
         <li className="font-bold">お気に入り</li>
+        {/* userアイコンだけがないログアウト状態はログイン画面ができてから作ると思ったので飛ばしました */}
         <li>
           <Link href="/fav">
             <IconUserCircle stroke={1.5} />
