@@ -3,8 +3,7 @@
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
-import { IconBrandApple } from "@tabler/icons-react";
-import { IconBrandGoogle } from "@tabler/icons-react";
+import { IconBrandApple, IconBrandGoogle } from "@tabler/icons-react";
 
 // ログイン画面用のコンポーネント
 export const AuthScreen = () => {
@@ -42,14 +41,14 @@ export const AuthScreen = () => {
       <div className="mt-6 flex flex-row items-center justify-center gap-2">
         <button
           onClick={() => {}}
-          className="flex items-center justify-center gap-1 rounded-md bg-blue-500 px-3 py-2 text-sm font-bold text-white"
+          className="flex items-center justify-center gap-1 rounded-md bg-blue-500 px-3 py-2 text-sm font-bold text-white hover:opacity-90"
         >
           <IconBrandGoogle size={18} strokeWidth={3} />
           Googleログイン
         </button>
         <button
           onClick={() => {}}
-          className="flex items-center justify-center gap-1 rounded-md bg-black px-3 py-2 text-sm font-bold text-white"
+          className="flex items-center justify-center gap-1 rounded-md bg-black px-3 py-2 text-sm font-bold text-white hover:opacity-80"
         >
           <IconBrandApple size={18} strokeWidth={3} />
           Appleログイン
