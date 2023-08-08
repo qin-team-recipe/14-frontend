@@ -2,7 +2,7 @@
 
 const MyRecipeAddButton = () => {
   return (
-    <div>
+    <div className="fixed z-30">
       <button className="cursor-pointer rounded-full bg-red-500 px-4 py-3 text-white drop-shadow-lg">
         <span className="bold">マイレシピ</span>を追加する
       </button>
