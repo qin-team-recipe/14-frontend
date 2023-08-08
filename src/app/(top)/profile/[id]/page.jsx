@@ -28,8 +28,11 @@ export default function Profile() {
           <RecipesNumber />
           <FollowerNumber />
         </div>
-        <div className="py-1 px-3">
-          <Button className="px-3" text="フォローする" />
+        <div className="mt-3">
+          <Button
+            className="w-358 h-6 bg-[#E54D2E] text-white mx-auto"
+            text="フォローする"
+          />
         </div>
       </div>
     </>

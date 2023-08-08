@@ -1,3 +1,5 @@
-export function Button({ text }) {
-  return <button className="flex rounded">{text}</button>;
+export function Button({ className, text }) {
+  return (
+    <button className={`block text-center rounded ${className}`}>{text}</button>
+  );
 }
