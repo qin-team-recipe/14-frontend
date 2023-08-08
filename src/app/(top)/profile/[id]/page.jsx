@@ -1,37 +1,42 @@
 import { PrevButton } from "@/app/_components/PrevButton";
-import { ProfileName } from "@/app/_components/ProfileName";
 import { ProfileImage } from "@/app/_components/ProfileImage";
 import { Sns } from "@/app/_components/Sns";
-import { ProfileId } from "@/app/_components/ProfileId";
-import { IntroductionText } from "@/app/_components/IntroductionText";
-import { RecipesNumber } from "@/app/_components/recipesNumber";
-import { FollowerNumber } from "@/app/_components/followerNumber";
-import { Button } from "@/app/_components/button";
+import { Counter } from "@/app/_components/Counter";
+import { FollowButton } from "@/app/_components/FollowButton";
 
-export default function Profile() {
+export default function Profile({ params }) {
   return (
-    <>
-      <div className="mx-auto min-h-screen px-4 sm:max-w-2xl">
+    <div className="mx-auto min-h-screen px-4">
+      <div className="flex flex-col gap-y-2">
         <div className="flex h-10 items-center justify-between">
           <PrevButton />
           <Sns />
         </div>
-        <div className="mt-4 flex items-center justify-between">
-          <div>
-            <ProfileName />
-            <ProfileId />
+
+        <div className="flex items-center justify-between gap-x-4">
+          <div className="flex flex-col gap-1">
+            <p className="line-clamp-2 break-all text-2xl font-bold">
+              山田シェフ山田シェフ山田シェフ山田シェフ山田シェフ山田シェフ
+            </p>
+            <p className="line-clamp-1 break-all text-sm">{params.id}</p>
           </div>
-          <ProfileImage />
+          <ProfileImage src="https://picsum.photos/200" />
         </div>
-        <IntroductionText text="初の絵本出版！ 『 まねっこシェフ』 ・ふわふわ！スクランブルエッグ ・にぎにぎ！おにぎり 主婦の友社より３月３日、２冊同時発売！ 絶賛発売中！" />
-        <div className="mt-2 flex text-gray-500">
-          <RecipesNumber />
-          <FollowerNumber />
-        </div>
-        <div className="mt-3">
-          <Button className="mx-auto h-6 w-358 bg-[#E54D2E] text-white" text="フォローする" />
+
+        <p className="text-sm">
+          初の絵本出版！ 『 まねっこシェフ』 ・ふわふわ！スクランブルエッグ ・にぎにぎ！おにぎり
+          主婦の友社より３月３日、２冊同時発売！ 絶賛発売中！
+        </p>
+
+        <div className="flex gap-x-3 text-gray-500">
+          <Counter count={123} type="recipe" />
+          <Counter count={456} type="follower" />
         </div>
       </div>
-    </>
+
+      <div className="mt-4">
+        <FollowButton>フォローする</FollowButton>
+      </div>
+    </div>
   );
 }
