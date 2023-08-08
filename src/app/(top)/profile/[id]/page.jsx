@@ -1,8 +1,8 @@
-import { PrevButton } from "@/app/_components/PrevButton";
-import { ProfileImage } from "@/app/_components/ProfileImage";
-import { Sns } from "@/app/_components/Sns";
-import { Counter } from "@/app/_components/Counter";
-import { FollowButton } from "@/app/_components/FollowButton";
+import { PrevButton } from "./_components/PrevButton";
+import { ProfileImage } from "./_components/ProfileImage";
+import { Sns } from "./_components/Sns";
+import { Counter } from "./_components/Counter";
+import { FollowButton } from "./_components/FollowButton";
 
 export default function Profile({ params }) {
   return (
@@ -24,8 +24,9 @@ export default function Profile({ params }) {
         </div>
 
         <p className="text-sm">
-          初の絵本出版！ 『 まねっこシェフ』 ・ふわふわ！スクランブルエッグ ・にぎにぎ！おにぎり
-          主婦の友社より３月３日、２冊同時発売！ 絶賛発売中！
+          初の絵本出版！ 『 まねっこシェフ』 ・ふわふわ！スクランブルエッグ
+          ・にぎにぎ！おにぎり 主婦の友社より３月３日、２冊同時発売！
+          絶賛発売中！
         </p>
 
         <div className="flex gap-x-3 text-gray-500">
