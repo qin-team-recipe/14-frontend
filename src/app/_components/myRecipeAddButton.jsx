@@ -1,9 +1,13 @@
-"use client"
+"use client";
 
-const myRecipeAddButton = () => {
+const MyRecipeAddButton = () => {
   return (
-    <button className="bg-rose-500 text-white">マイレシピを追加する</button>
+    <div>
+      <button className="cursor-pointer rounded-full bg-red-500 px-4 py-3 text-white drop-shadow-lg">
+        <span className="bold">マイレシピ</span>を追加する
+      </button>
+    </div>
   );
 };
 
-export default myRecipeAddButton;
+export default MyRecipeAddButton;

@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/_components/myRecipeAddButton.jsx"  ],
+, "src/app/_components/MyRecipeAddButton.jsx"  ],
   "exclude": [
     "node_modules"
   ]
