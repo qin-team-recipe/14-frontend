@@ -1,8 +1,4 @@
-import {
-  IconBrandYoutube,
-  IconBrandInstagram,
-  IconDotsCircleHorizontal,
-} from "@tabler/icons-react";
+import { IconBrandYoutube, IconBrandInstagram, IconDotsCircleHorizontal } from "@tabler/icons-react";
 import Link from "next/link";
 
 export function Sns() {
