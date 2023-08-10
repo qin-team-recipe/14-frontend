@@ -7,7 +7,7 @@ import {
 import { NavigationItem } from "./NavigationItem";
 
 // ナビゲーション
-export const Navigation = () => {
+export function Navigation() {
   return (
     <nav className="fixed bottom-0 z-10 flex w-full flex-col gap-10 sm:sticky sm:w-60 sm:pt-5">
       {/* ロゴ（PCサイズで表示） */}
@@ -30,4 +30,4 @@ export const Navigation = () => {
       </div>
     </nav>
   );
-};
+}

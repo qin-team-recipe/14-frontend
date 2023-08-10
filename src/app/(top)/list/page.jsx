@@ -1,5 +1,9 @@
-import ListBar from "@/app/_components/ListBar/ListBar";
+import { ListBar } from "@/components/Bar";
 
 export default function List() {
-  return <ListBar />;
+  return (
+    <div className="px-4 py-3">
+      <ListBar />
+    </div>
+  );
 }

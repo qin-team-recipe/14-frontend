@@ -1,5 +1,9 @@
-import FavBar from "@/app/_components/FavBar/FavBar";
+import { FavBar } from "@/components/Bar";
 
 export default function Fav() {
-  return <FavBar />;
+  return (
+    <div className="px-4 py-3">
+      <FavBar />
+    </div>
+  );
 }
