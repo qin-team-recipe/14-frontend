@@ -1,4 +1,4 @@
-import ChefImages from "@/app/_components/ChefImages";
+import { ChefImages } from "@/components/Chef";
 
 export default function Fav() {
   return (

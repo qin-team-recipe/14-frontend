@@ -1,4 +1,4 @@
-const chefData = [
+export const CHEF_DATA = [
   {
     id: 1,
     name: "山田シェフ",
@@ -29,5 +29,3 @@ const chefData = [
       "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
   },
 ];
-
-export default chefData;
