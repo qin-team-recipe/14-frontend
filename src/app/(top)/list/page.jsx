@@ -1,11 +1,12 @@
 import { AuthScreen } from "@/components/Auth";
+import { ListBar } from "@/components/Bar";
 import src from "~/images/cookingGirl.png";
 
 export default function List() {
   return (
-    <>
-      <p className="text-red-500">お買い物リストページ</p>
+    <div className="py-3 px-4">
+      <ListBar />
       <AuthScreen src={src} />
-    </>
+    </div>
   );
 }

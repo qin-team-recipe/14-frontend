@@ -1,11 +1,12 @@
 import { AuthScreen } from "@/components/Auth";
+import { FavBar } from "@/components/Bar";
 import src from "~/images/bakingGirl.png";
 
 export default function Fav() {
   return (
-    <>
-      <p className="text-red-500">お気に入りページ</p>
+    <div className="py-3 px-4">
+      <FavBar />
       <AuthScreen src={src} />
-    </>
+    </div>
   );
 }

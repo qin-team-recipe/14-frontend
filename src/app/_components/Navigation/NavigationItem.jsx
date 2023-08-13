@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 // ナビゲーションアイテム
-export const NavigationItem = ({ text, icon, href }) => {
+export function NavigationItem({ text, icon, href }) {
   // 現在のパス取得
   const pathname = usePathname();
   // 現在のパスとhrefが一致している場合はtrueを返す
@@ -23,4 +23,4 @@ export const NavigationItem = ({ text, icon, href }) => {
       </div>
     </Link>
   );
-};
+}
