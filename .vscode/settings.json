@@ -12,5 +12,6 @@
   // 最初から補完を出すための設定。詳しくは https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "cSpell.words": ["autosize"]
 }
