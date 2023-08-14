@@ -1,12 +1,12 @@
-import { AuthScreen } from "@/components/Auth";
 import { FavBar } from "@/components/Bar";
-import src from "~/images/bakingGirl.png";
+import { ChefImages } from "@/components/Chef/ChefImages";
+// import src from "~/images/bakingGirl.png";
 
 export default function Fav() {
   return (
-    <div className="py-3 px-4">
+    <div className="px-4 py-3">
       <FavBar />
-      <AuthScreen src={src} />
+      <ChefImages />
     </div>
   );
 }
