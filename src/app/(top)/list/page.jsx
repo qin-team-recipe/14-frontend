@@ -4,7 +4,7 @@ import src from "~/images/cookingGirl.png";
 
 export default function List() {
   return (
-    <div className="py-3 px-4">
+    <div className="px-4 py-3">
       <ListBar />
       <AuthScreen src={src} />
     </div>

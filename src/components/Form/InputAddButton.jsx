@@ -1,6 +1,6 @@
 import { IconPlus } from "@tabler/icons-react";
 
-// テキストフィールドを追加するボタン(MultiInputField用)
+// テキストフィールドを追加するボタン
 export function InputAddButton({ onClick, disabled, children }) {
   return (
     <button
@@ -9,7 +9,7 @@ export function InputAddButton({ onClick, disabled, children }) {
       className="flex items-center gap-1 text-sm text-orange-600"
     >
       <IconPlus size={14} />
-      <p>{children}</p>
+      {children}
     </button>
   );
 }
