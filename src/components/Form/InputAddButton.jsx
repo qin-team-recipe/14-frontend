@@ -1,11 +1,7 @@
 import { IconPlus } from "@tabler/icons-react";
-import { getLabelAndText } from "./utils/helper";
 
 // テキストフィールドを追加するボタン
-export function InputAddButton({ onClick, disabled, type }) {
-  // typeに応じたボタンテキストを取得
-  const text = getLabelAndText(type).text;
-
+export function InputAddButton({ onClick, disabled, children }) {
   return (
     <button
       onClick={onClick}
@@ -13,7 +9,7 @@ export function InputAddButton({ onClick, disabled, type }) {
       className="flex items-center gap-1 text-sm text-orange-600"
     >
       <IconPlus size={14} />
-      <p>{text}</p>
+      {children}
     </button>
   );
 }

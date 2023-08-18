@@ -1,11 +1,11 @@
 import { clsx } from "clsx";
 
 // フォームで使用する共通ボタン(ex.保存する、キャンセルする)
-export function CommonButton({ children, onClick, disable, bgColor }) {
+export function CommonButton({ children, onClick, disabled, bgColor }) {
   return (
     <button
       onClick={onClick}
-      disabled={disable}
+      disabled={disabled}
       className={clsx(
         "w-full rounded-md border px-3 py-2 text-base hover:opacity-80",
         bgColor === "orange"
