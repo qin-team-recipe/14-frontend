@@ -1,3 +1,4 @@
 export { TextField } from "./TextField";
 export { ImageField } from "./ImageField";
-export { InputAddButton } from "./InputAddButton";
+export { MultiTextField } from "./MultiTextField";
+export { CommonButton } from "./CommonButton";
