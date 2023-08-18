@@ -16,19 +16,19 @@ export function MultiTextField({ name, type }) {
           type="text"
           id={name}
           name={name}
-          className="w-full border border-x-0 px-4 py-2"
+          className="w-full border border-x-0 px-4 py-2 focus:outline-none"
         />
         <input
           type="text"
           id={name}
           name={name}
-          className="w-full border-x-0 border-b px-4 py-2"
+          className="w-full border border-x-0 px-4 py-2 focus:outline-none"
         />
         <input
           type="text"
           id={name}
           name={name}
-          className="w-full border-x-0 border-b px-4 py-2"
+          className="w-full border border-x-0 px-4 py-2 focus:outline-none"
         />
       </div>
       {/* 〇〇を追加するボタン */}
