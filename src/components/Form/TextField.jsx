@@ -13,7 +13,7 @@ export function TextField({ label, multiline, placeholder, name }) {
           id={name}
           name={name}
           placeholder={placeholder}
-          className="w-full border border-x-0 px-4 py-2 focus:outline-none"
+          className="w-full border border-x-0 px-4 py-2"
         />
       ) : (
         <input
@@ -21,7 +21,7 @@ export function TextField({ label, multiline, placeholder, name }) {
           id={name}
           name={name}
           placeholder={placeholder}
-          className="w-full border border-x-0 px-4 py-2 focus:outline-none"
+          className="w-full border border-x-0 px-4 py-2"
         />
       )}
     </div>
