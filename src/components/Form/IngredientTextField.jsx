@@ -1,24 +1,35 @@
+"use client";
+
+import { useState } from "react";
 import { IconMinus, IconPlus, IconDotsVertical } from "@tabler/icons-react";
 import clsx from "clsx";
 
 // フォームで使用するinput行が増える材料用コンポーネント
 export function IngredientTextField({ name, addButtonElement, label, items }) {
+  const [num, setNum] = useState(1);
+
+  const plus = () => {
+    setNum((prev) => prev + 1);
+  };
+
+  const minus = () => {
+    setNum((prev) => prev - 1);
+  };
+
   return (
     <div className="space-y-0.5">
-      <div className="flex items-center gap-4 px-4">
+      <div className="flex items-center gap-x-2 px-4">
         <label htmlFor={name} className="block text-base font-bold">
-          {label} / 2人前
+          {label} / {num}人前
         </label>
         {/* 材料の◯人前を増減させるボタン */}
         <div className="flex gap-1.5">
-          <IconMinus
-            size={16}
-            className="cursor-pointer bg-orange-50 text-orange-700"
-          />
-          <IconPlus
-            size={16}
-            className="cursor-pointer bg-orange-50 text-orange-700"
-          />
+          <button className="cursor-pointer bg-orange-50 text-orange-700">
+            <IconMinus onClick={minus} size={16} />
+          </button>
+          <button className="cursor-pointer bg-orange-50 text-orange-700">
+            <IconPlus onClick={plus} size={16} />
+          </button>
         </div>
       </div>
       {/* 材料のinputを複数表示するエリア */}
