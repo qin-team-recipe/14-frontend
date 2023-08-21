@@ -1,24 +1,35 @@
 "use client";
-import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function SlideTab(props) {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const handleTabClick = (index) => {
-    setActiveTab(index);
-  };
+  const { page1, page2, tabItem1, tabItem2 } = props;
+  const pathname = usePathname();
 
   return (
-    <div className="flex gap-x-4">
-      <div className="flex">
-        <div className={` ${activeTab === 0 ? "border-b border-black" : ""}`}>
-          <button onClick={() => handleTabClick(0)}>{props.tabItem1}</button>
-        </div>
-        <div className={`${activeTab === 1 ? "border-b border-black" : ""}`}>
-          <button onClick={() => handleTabClick(1)}>{props.tabItem2}</button>
-        </div>
+    <div className="flex pt-2 text-center text-sm">
+      <div
+        className={`w-1/2 pb-2 ${
+          pathname === page1 ? "border-b-2 border-black font-bold" : "border-b"
+        }`}
+      >
+        <Link className="w-full" href={page1}>
+          {tabItem1}
+        </Link>
+      </div>
+      <div
+        className={`w-1/2 pb-2 ${
+          pathname === page2 ? "border-b-2 border-black font-bold" : "border-b"
+        }`}
+      >
+        <Link className="w-full" href={page2}>
+          {tabItem2}
+        </Link>
       </div>
     </div>
   );
 }
-{/* 使い方です <SlideTab tabItem1="作り方" tabItem2="材料"/> */}
+
+/* 使い方です
+   <SlideTab tabItem1="作り方" tabItem2="材料" page１="/xx" page2="/xx" /> 
+   */
