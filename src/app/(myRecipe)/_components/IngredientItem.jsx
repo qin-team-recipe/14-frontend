@@ -1,7 +1,6 @@
 import { AddAllButton } from "./AddAllButton";
 import { AddButton } from "./AddButton";
 
-
 export function IngredientItem({ person }) {
   const items = ["キャベツ", "ニンジン", "レタス"];
   return (

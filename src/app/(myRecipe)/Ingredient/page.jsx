@@ -1,6 +1,5 @@
 import { IngredientItem } from "../_components/IngredientItem";
 
-
 export default function Ingredient() {
   return (
     <div>
