@@ -2,8 +2,7 @@ import { AddAllButton } from "./AddAllButton";
 import { AddButton } from "./AddButton";
 
 
-export function IngredientItem(props) {
-  const { person } = props;
+export function IngredientItem({ person }) {
   const items = ["キャベツ", "ニンジン", "レタス"];
   return (
     <div className="pt-5">

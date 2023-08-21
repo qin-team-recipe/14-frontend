@@ -2,8 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export function SlideTab(props) {
-  const { page1, page2, tabItem1, tabItem2 } = props;
+export function SlideTab({ page1, page2, tabItem1, tabItem2 }) {
   const pathname = usePathname();
 
   return (
