@@ -1,4 +1,5 @@
-import { IngredientItem } from "../_components/IngredientItem/IngredientItem";
+import { IngredientItem } from "../_components/IngredientItem";
+
 
 export default function Ingredient() {
   return (

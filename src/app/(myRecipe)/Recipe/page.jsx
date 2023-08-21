@@ -1,4 +1,4 @@
-import { RecipeArray } from "../_components/RecipeArray/RecipeArray";
+import { RecipeArray } from "../_components/RecipeArray";
 
 export default function Recipe() {
   return (

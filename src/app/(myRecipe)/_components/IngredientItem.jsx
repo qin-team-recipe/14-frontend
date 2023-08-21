@@ -1,5 +1,6 @@
-import { AddAllButton } from "../AddAllButton/AddAllButton";
-import { AddButton } from "../AddButton/AddButton";
+import { AddAllButton } from "./AddAllButton";
+import { AddButton } from "./AddButton";
+
 
 export function IngredientItem(props) {
   const { person } = props;
