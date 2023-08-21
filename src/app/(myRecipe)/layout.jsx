@@ -1,5 +1,6 @@
 import { SlideTab } from "@/components/SlideTab/SlideTab";
 import { Navigation } from "../_components/Navigation";
+import { CopyButton } from "./_components/CopyButton";
 
 export default function myRecipeLayout({ children }) {
   return (
@@ -13,6 +14,7 @@ export default function myRecipeLayout({ children }) {
           page2="/Ingredient"
         />
         {children}
+        <CopyButton />
       </div>
     </div>
   );
