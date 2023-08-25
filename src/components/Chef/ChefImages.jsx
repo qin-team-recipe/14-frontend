@@ -65,7 +65,7 @@ export function ChefImages() {
 
   return (
     <div className="space-y-3">
-      <h1 className="text-xl font-bold">シェフ</h1>
+      <h1 className="px-2 py-1 text-xl font-bold">シェフ</h1>
       <div className="flex gap-x-4">
         <Swiper slidesPerView={4.7}>
           {chefs.map((chef) => (
