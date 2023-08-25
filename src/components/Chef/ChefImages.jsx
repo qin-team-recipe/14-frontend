@@ -1,3 +1,9 @@
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+
 const CHEF_DATA = [
   {
     id: 1,
@@ -28,6 +34,30 @@ const CHEF_DATA = [
     image:
       "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
   },
+  {
+    id: 5,
+    name: "高橋シェフ",
+    image:
+      "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+  },
+  {
+    id: 5,
+    name: "高橋シェフ",
+    image:
+      "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+  },
+  {
+    id: 5,
+    name: "高橋シェフ",
+    image:
+      "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+  },
+  {
+    id: 5,
+    name: "高橋シェフ",
+    image:
+      "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+  },
 ];
 
 export function ChefImages() {
@@ -37,9 +67,13 @@ export function ChefImages() {
     <div className="space-y-3">
       <h1 className="text-xl font-bold">シェフ</h1>
       <div className="flex gap-x-4">
-        {chefs.map((chef) => (
-          <ChefImage key={chef.id} name={chef.name} image={chef.image} />
-        ))}
+        <Swiper slidesPerView={4.7}>
+          {chefs.map((chef) => (
+            <SwiperSlide key={chef.id}>
+              <ChefImage key={chef.id} name={chef.name} image={chef.image} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );
