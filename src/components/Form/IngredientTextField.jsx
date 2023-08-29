@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+
 import { IconMinus, IconPlus, IconDotsVertical } from "@tabler/icons-react";
 import clsx from "clsx";
 
@@ -24,11 +25,25 @@ export function IngredientTextField({ name, addButtonElement, label, items }) {
         </label>
         {/* 材料の◯人前を増減させるボタン */}
         <div className="flex gap-1.5">
-          <button className="cursor-pointer bg-orange-50 text-orange-700">
-            <IconMinus onClick={minus} size={16} />
+          <button
+            onClick={minus}
+            disabled={num === 1}
+            className={clsx(
+              "cursor-pointer bg-orange-50 text-orange-700",
+              num === 1 && "cursor-not-allowed bg-gray-100 text-gray-300"
+            )}
+          >
+            <IconMinus size={16} />
           </button>
-          <button className="cursor-pointer bg-orange-50 text-orange-700">
-            <IconPlus onClick={plus} size={16} />
+          <button
+            onClick={plus}
+            disabled={num === 6}
+            className={clsx(
+              "cursor-pointer bg-orange-50 text-orange-700",
+              num === 6 && "cursor-not-allowed bg-gray-100 text-gray-300"
+            )}
+          >
+            <IconPlus size={16} />
           </button>
         </div>
       </div>
@@ -50,10 +65,12 @@ export function IngredientTextField({ name, addButtonElement, label, items }) {
               defaultValue={val.value}
               className="flex-1 text-sm focus:outline-none"
             />
-            <IconDotsVertical
-              size={20}
-              className="cursor-pointer text-gray-500"
-            />
+            <div onClick={() => alert("モーダルでます")}>
+              <IconDotsVertical
+                size={20}
+                className="cursor-pointer text-gray-500"
+              />
+            </div>
           </div>
         ))}
       </div>
