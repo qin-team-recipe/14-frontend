@@ -12,7 +12,7 @@ export function NewMyRecipeBar() {
       }
       rightComponent={
         <Link
-          href="/my-recipe/draft"
+          href="/my-recipe/drafts"
           className="text-base font-bold text-gray-500"
         >
           下書き一覧
