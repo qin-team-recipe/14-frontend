@@ -1,3 +1,11 @@
+import { DraftBar } from "@/components/Bar";
+
 export default function Draft() {
-  return <div>マイレシピ下書き</div>;
+  return (
+    <div>
+      <div className="px-4 py-3">
+        <DraftBar />
+      </div>
+    </div>
+  );
 }
