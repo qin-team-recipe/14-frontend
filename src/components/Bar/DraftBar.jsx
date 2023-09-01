@@ -7,11 +7,11 @@ export function DraftBar() {
   return (
     <Bar
       leftComponent={
-        <div className="flex">
+        <div className="flex gap-x-4">
           <Link href="#">
             <IconArrowLeft stroke={1.5} />
           </Link>
-          <span className="mx-4 font-bold text-gray-500">下書き</span>
+          <span className="font-bold text-gray-500">下書き</span>
         </div>
       }
     />

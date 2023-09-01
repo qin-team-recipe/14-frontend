@@ -1,10 +1,8 @@
-"use client";
-
 import Link from "next/link";
 
-import { IconTrash } from "@tabler/icons-react";
 import { DraftBar } from "@/components/Bar";
-import { CreatedDate } from "./_components";
+import { DeleteDraftButton } from "./_components";
+import { format } from "date-fns";
 
 export default function Draft() {
   return (
@@ -13,22 +11,23 @@ export default function Draft() {
         <DraftBar />
       </div>
       <div className="divide-y border-y">
-        {drafts.map((draft) => (
+        {DRAFTS.map((draft) => (
           <Link
+            // TODO: 正しいパスに変更
             href="/my-recipe/new"
             key={draft.id}
-            className="flex justify-between px-4 py-2"
+            className="flex justify-between gap-x-2 px-4 py-2"
           >
-            <div className="">
-              <p className="line-clamp-1 whitespace-normal">
+            <div>
+              <p className="line-clamp-1 whitespace-normal break-all text-sm">
                 {draft.title || "レシピ名未記載"}
               </p>
-              <CreatedDate date={draft.createdAt} />
+              <small className="text-xs text-gray-500">
+                作成日時: {format(new Date(draft.createdAt), "yyyy年M月dd日")}
+              </small>
             </div>
 
-            <button onClick={() => alert("モーダルでます")}>
-              <IconTrash size={24} stroke={1.5} className="text-gray-500" />
-            </button>
+            <DeleteDraftButton recipeId={draft.id} />
           </Link>
         ))}
       </div>
@@ -37,7 +36,7 @@ export default function Draft() {
 }
 
 // 下書きのダミーデータ
-const drafts = [
+const DRAFTS = [
   {
     id: 1,
     title: "グラタン",
@@ -46,21 +45,21 @@ const drafts = [
   {
     id: 2,
     title: "カレーライス",
-    createdAt: "2023/05/30",
+    createdAt: "2023-05-30",
   },
   {
     id: 3,
     title: "", // 空文字のやつ
-    createdAt: "2023年6月30日",
+    createdAt: "2023-06-12",
   },
   {
     id: 4,
-    title: "aaaaaaaaaaaaテストテストテストテストテストテストテストテスト", // 長いやつ
-    createdAt: "20230630",
+    title: "   テストテスト        テスト", // 長いやつ
+    createdAt: "2023-07-01",
   },
   {
     id: 5,
-    title: "testtest",
-    createdAt: "2023-09-31", // 存在しない日付
+    title: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    createdAt: "2023-08-31", // 存在しない日付
   },
 ];

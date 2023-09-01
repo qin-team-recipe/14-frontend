@@ -1,1 +1,1 @@
-export { CreatedDate } from "./CreatedDate";
+export { DeleteDraftButton } from "./DeleteDraftButton";
