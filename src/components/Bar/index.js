@@ -4,3 +4,4 @@ export { FavBar } from "./FavBar";
 export { ListBar } from "./ListBar";
 export { NewMyRecipeBar } from "./NewMyRecipeBar";
 export { SettingBar } from "./SettingBar";
+export { TosBar } from "./TosBar";
