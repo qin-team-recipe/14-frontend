@@ -18,20 +18,27 @@ export default function Setting() {
         <div className="space-y-3 px-4">
           <h2 className="font-bold">利用規約や問い合わせ</h2>
           <div className="py-3">
-            <LinkBlock icon={<IconChevronRight />} href="/settings/tos">
+            <LinkBlock
+              icon={<IconChevronRight size={24} stroke={1.5} />}
+              href="/settings/tos"
+            >
               利用規約
             </LinkBlock>
           </div>
           <div className="py-3">
-            <LinkBlock icon={<IconChevronRight />}>
+            <LinkBlock icon={<IconChevronRight size={24} stroke={1.5} />}>
               プライバシーポリシー
             </LinkBlock>
           </div>
           <div className="py-3">
-            <LinkBlock icon={<IconArrowUpRight />}>運営会社</LinkBlock>
+            <LinkBlock icon={<IconArrowUpRight size={24} stroke={1.5} />}>
+              運営会社
+            </LinkBlock>
           </div>
           <div className="py-3">
-            <LinkBlock icon={<IconArrowUpRight />}>お問い合わせ</LinkBlock>
+            <LinkBlock icon={<IconArrowUpRight size={24} stroke={1.5} />}>
+              お問い合わせ
+            </LinkBlock>
           </div>
         </div>
 
@@ -39,7 +46,9 @@ export default function Setting() {
         <div className="space-y-3 px-4">
           <h2 className="font-bold">アカウントの操作</h2>
           <div className="py-3">
-            <LinkBlock icon={<IconLogout />}>ログアウト</LinkBlock>
+            <LinkBlock icon={<IconLogout size={24} stroke={1.5} />}>
+              ログアウト
+            </LinkBlock>
           </div>
         </div>
 

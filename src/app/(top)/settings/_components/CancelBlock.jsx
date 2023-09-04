@@ -10,7 +10,7 @@ export function CancelBlock({ children }) {
     >
       <div className="flex justify-between gap-x-4">
         <p>{children}</p>
-        <IconAlertCircle />
+        <IconAlertCircle size={24} stroke={1.5} />
       </div>
     </button>
   );
