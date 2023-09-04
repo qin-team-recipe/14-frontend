@@ -1,0 +1,1 @@
+export { VerticalChefImage } from "./VerticalChefImage";
