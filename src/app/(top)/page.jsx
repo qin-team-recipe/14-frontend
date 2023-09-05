@@ -1,7 +1,9 @@
+import { SearchBox } from "@/components/SearchBox/SearchBox";
+
 export default function Home() {
   return (
     <>
-      <div className="text-red-500">デフォルトページです</div>
+      <SearchBox />
     </>
   );
 }
