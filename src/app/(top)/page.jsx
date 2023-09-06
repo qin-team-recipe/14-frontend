@@ -1,4 +1,5 @@
 import { VerticalChefImage } from "@/components/VerticalChefImage";
+
 const DUMMY_DATE = [
   {
     id: 1,
@@ -14,10 +15,11 @@ const DUMMY_DATE = [
     image: "https://picsum.photos/88/116?random-5",
   },
 ];
+
 export default function Home() {
   return (
-    <>
-      <VerticalChefImage DUMMY_DATE={DUMMY_DATE} />
-    </>
+    <div className="px-4">
+      <VerticalChefImage chefs={DUMMY_DATE} />
+    </div>
   );
 }
