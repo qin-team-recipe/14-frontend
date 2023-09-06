@@ -16,7 +16,7 @@ export function Tabs({ tabItems }) {
             href={item.href}
             className={clsx(
               "flex-1 py-2.5",
-              pathname === item.href && "border-b-2 border-black font-bold"
+              pathname === item.href && "border-b-2 border-black font-bold",
             )}
           >
             {item.label}

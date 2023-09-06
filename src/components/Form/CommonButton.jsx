@@ -10,7 +10,7 @@ export function CommonButton({ children, onClick, disabled, bgColor }) {
         "w-full rounded-md border px-3 py-2 text-base hover:opacity-80",
         bgColor === "orange"
           ? "bg-orange-600 text-white"
-          : "border-orange-600 bg-white text-orange-700"
+          : "border-orange-600 bg-white text-orange-700",
       )}
     >
       {children}

@@ -30,7 +30,7 @@ export function IngredientTextField({ name, addButtonElement, label, items }) {
             disabled={num === 1}
             className={clsx(
               "cursor-pointer bg-orange-50 text-orange-700",
-              "disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-300"
+              "disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-300",
             )}
           >
             <IconMinus size={16} />
@@ -40,7 +40,7 @@ export function IngredientTextField({ name, addButtonElement, label, items }) {
             disabled={num === 6}
             className={clsx(
               "cursor-pointer bg-orange-50 text-orange-700",
-              "disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-300"
+              "disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-300",
             )}
           >
             <IconPlus size={16} />
