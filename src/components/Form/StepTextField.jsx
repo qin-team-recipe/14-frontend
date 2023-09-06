@@ -18,7 +18,7 @@ export function StepTextField({ name, addButtonElement, label, items }) {
               className={clsx(
                 "h-5 w-5 rounded-full",
                 "flex shrink-0 items-center justify-center",
-                "bg-orange-500 text-xs text-white"
+                "bg-orange-500 text-xs text-white",
               )}
             >
               {index + 1}
