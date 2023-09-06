@@ -9,7 +9,7 @@ export function FavBar() {
   return (
     <Bar
       leftComponent={
-        <Link href="#">
+        <Link href="/settings">
           <IconMenu stroke={1.5} />
         </Link>
       }
