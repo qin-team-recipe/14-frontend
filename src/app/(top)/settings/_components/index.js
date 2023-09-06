@@ -1,2 +1,2 @@
 export { LinkBlock } from "./LinkBlock";
-export { CancelBlock } from "./CancelBlock";
+export { ButtonBlock } from "./ButtonBlock";
