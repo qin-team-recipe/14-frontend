@@ -16,11 +16,11 @@ export default function Sample() {
       <SNSMenu />
       <div>マイページ画面</div>
       <MyPageMenu />
-      <div>マイレシピ画面(2パターン)</div>
+      <div>マイレシピ画面(2パターン対応)</div>
       <MyRecipeMenu />
-      <div>マイレシピ追加画面(2パターン)</div>
+      <div>マイレシピ追加画面(2パターン対応)</div>
       <CreateRecipeMenu />
-      <div>買い物リスト画面(自分メモとレシピのリスト)</div>
+      <div>買い物リスト画面(2パターン対応)</div>
       <ListMenu />
       <div>買い物リスト画面(自分メモアイテムメニュー)</div>
       <MemoItemMenu />
