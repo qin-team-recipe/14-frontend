@@ -6,15 +6,15 @@ import {
   IconEdit,
   IconTrash,
 } from "@tabler/icons-react";
+import { Menu } from "./Menu";
 import { MenuItemContainer } from "./MenuItemContainer";
-import { MenuTest } from "./MenuTest";
 
 // マイレシピ作成画面で使用するメニュー
 // TODO: buttonのonClickに処理を追加
 export function CreateRecipeMenu({ isEdit }) {
   // 編集用のメニューかどうかで切り替える
   return isEdit ? (
-    <MenuTest
+    <Menu
       items={[
         {
           type: "item",
@@ -59,7 +59,7 @@ export function CreateRecipeMenu({ isEdit }) {
       ]}
     />
   ) : (
-    <MenuTest
+    <Menu
       items={[
         {
           type: "item",

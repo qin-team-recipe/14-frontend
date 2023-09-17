@@ -5,13 +5,13 @@ import {
   IconBrandTwitter,
   IconLink,
 } from "@tabler/icons-react";
+import { Menu } from "./Menu";
 import { MenuItemContainer } from "./MenuItemContainer";
-import { MenuTest } from "./MenuTest";
 
 // TODO: Linkのhrefに正しいリンクを指定する
 export function SNSMenu() {
   return (
-    <MenuTest
+    <Menu
       items={[
         {
           type: "item",

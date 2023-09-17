@@ -1,3 +1,5 @@
+"use client";
+
 import {
   IconCopy,
   IconEdit,
@@ -5,45 +7,92 @@ import {
   IconLockOpen,
   IconTrash,
 } from "@tabler/icons-react";
+import { Menu } from "./Menu";
+import { MenuItemContainer } from "./MenuItemContainer";
 
 // マイレシピ画面で使用するメニュー
-export function MyRecipeMenu({ status = "public" }) {
-  return (
-    <div className="w-64 rounded-md border shadow-xl">
-      <div className="divide-y text-gray-500">
-        <div className="space-y-3 px-3 py-2.5 text-gray-500">
-          <div className="flex items-center gap-x-2">
-            <IconEdit size={16} stroke={1.5} />
-            <div className="text-sm">編集する</div>
-          </div>
-          {/* ステータスに応じてメニューアイテム切り替え */}
-          {status === "public" ? (
-            <>
-              <div className="flex items-center gap-x-2">
-                <IconCopy size={16} stroke={1.5} />
-                <div className="text-sm">URLをコピーする</div>
-              </div>
-              <div className="flex items-center gap-x-2">
-                <IconLock size={16} stroke={1.5} />
-                <div className="text-sm">レシピを非公開にする</div>
-              </div>
-            </>
-          ) : (
-            <div className="flex items-center gap-x-2">
-              <IconLockOpen size={16} stroke={1.5} />
-              <div className="text-sm">レシピを公開する</div>
-            </div>
-          )}
-        </div>
-        <div className="space-y-3 px-3 py-2.5 text-gray-500">
-          <div className="flex items-center gap-x-2">
-            <IconTrash size={16} stroke={1.5} />
-            <div className="text-sm">削除する</div>
-          </div>
-        </div>
-      </div>
-    </div>
+export function MyRecipeMenu({ status }) {
+  // statusが公開か非公開かで切り替える
+  return status === "public" ? (
+    <Menu
+      items={[
+        {
+          type: "item",
+          key: "edit",
+          component: (
+            <MenuItemContainer icon={IconEdit}>
+              <button onClick={() => {}}>編集する</button>
+            </MenuItemContainer>
+          ),
+        },
+        {
+          type: "item",
+          key: "copy",
+          component: (
+            <MenuItemContainer icon={IconCopy}>
+              <button onClick={() => {}}>URLをコピーする</button>
+            </MenuItemContainer>
+          ),
+        },
+        {
+          type: "item",
+          key: "unlock",
+          component: (
+            <MenuItemContainer icon={IconLock}>
+              <button onClick={() => {}}>レシピを非公開にする</button>
+            </MenuItemContainer>
+          ),
+        },
+        {
+          type: "divider",
+          key: "divider1",
+        },
+        {
+          type: "item",
+          key: "delete",
+          component: (
+            <MenuItemContainer icon={IconTrash}>
+              <button onClick={() => {}}>削除する</button>
+            </MenuItemContainer>
+          ),
+        },
+      ]}
+    />
+  ) : (
+    <Menu
+      items={[
+        {
+          type: "item",
+          key: "edit",
+          component: (
+            <MenuItemContainer icon={IconEdit}>
+              <button onClick={() => {}}>編集する</button>
+            </MenuItemContainer>
+          ),
+        },
+        {
+          type: "item",
+          key: "unlock",
+          component: (
+            <MenuItemContainer icon={IconLockOpen}>
+              <button onClick={() => {}}>レシピを公開にする</button>
+            </MenuItemContainer>
+          ),
+        },
+        {
+          type: "divider",
+          key: "divider1",
+        },
+        {
+          type: "item",
+          key: "delete",
+          component: (
+            <MenuItemContainer icon={IconTrash}>
+              <button onClick={() => {}}>削除する</button>
+            </MenuItemContainer>
+          ),
+        },
+      ]}
+    />
   );
 }
-
-// TODO: <div><Icon /><div>テキスト</div></div>はコンポーネントにする
