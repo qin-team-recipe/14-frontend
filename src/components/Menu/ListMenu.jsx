@@ -1,3 +1,5 @@
+"use client";
+
 import { IconChevronDown, IconChevronUp, IconTrash } from "@tabler/icons-react";
 import { Menu } from "./Menu";
 import { MenuItemContainer } from "./MenuItemContainer";
@@ -13,7 +15,7 @@ export function ListMenu({ listItemCount }) {
           key: "down",
           component: (
             <MenuItemContainer icon={IconChevronDown}>
-              下に移動する
+              <button onClick={() => {}}>下に移動する</button>
             </MenuItemContainer>
           ),
         },
@@ -26,7 +28,7 @@ export function ListMenu({ listItemCount }) {
           key: "delete",
           component: (
             <MenuItemContainer icon={IconTrash}>
-              アイテムを削除する
+              <button onClick={() => {}}>アイテムを削除する</button>
             </MenuItemContainer>
           ),
         },
@@ -40,7 +42,7 @@ export function ListMenu({ listItemCount }) {
           key: "up",
           component: (
             <MenuItemContainer icon={IconChevronUp}>
-              上に移動する
+              <button onClick={() => {}}>上に移動する</button>
             </MenuItemContainer>
           ),
         },
@@ -49,7 +51,7 @@ export function ListMenu({ listItemCount }) {
           key: "down",
           component: (
             <MenuItemContainer icon={IconChevronDown}>
-              下に移動する
+              <button onClick={() => {}}>下に移動する</button>
             </MenuItemContainer>
           ),
         },
@@ -62,7 +64,7 @@ export function ListMenu({ listItemCount }) {
           key: "delete",
           component: (
             <MenuItemContainer icon={IconTrash}>
-              アイテムを削除する
+              <button onClick={() => {}}>アイテムを削除する</button>
             </MenuItemContainer>
           ),
         },
