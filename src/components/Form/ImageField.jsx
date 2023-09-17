@@ -12,7 +12,7 @@ export function ImageField({ label, name }) {
         className={clsx(
           "relative h-28 w-28",
           "flex flex-col items-center justify-center",
-          "rounded-lg border bg-white text-gray-500"
+          "rounded-lg border bg-white text-gray-500",
         )}
       >
         <input
