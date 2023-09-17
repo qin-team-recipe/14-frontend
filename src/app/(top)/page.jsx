@@ -1,3 +1,4 @@
+import { ShowMore } from "@/components/ShowMore";
 import { VerticalChefList } from "@/components/VerticalChefList/VerticalChefList";
 
 const DUMMY_DATE = [
@@ -41,6 +42,9 @@ const DUMMY_DATE = [
 export default function Home() {
   return (
     <div className="p-4">
+      <div className="py-4">
+        <ShowMore href="/search/chef" text="シェフ" />
+      </div>
       <VerticalChefList chefs={DUMMY_DATE} />
     </div>
   );
