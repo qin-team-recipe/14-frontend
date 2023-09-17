@@ -9,13 +9,13 @@ const ZenAntique = Zen_Antique({
 
 export function ShowMore({ href, text }) {
   return (
-    <>
-      <div className="flex items-center justify-between ">
-        <p className={clsx("text-xl", ZenAntique.className)}>{`${text === undefined ? "":text}`}</p>
-        <Link className="font-bold text-gray-400 hover:underline" href={href}>
-          もっと見る
-        </Link>
-      </div>
-    </>
+    <div className="flex items-center justify-between ">
+      <p className={clsx("text-xl", ZenAntique.className)}>{`${
+        text === undefined ? "" : text
+      }`}</p>
+      <Link className="font-bold text-gray-400 hover:underline" href={href}>
+        もっと見る
+      </Link>
+    </div>
   );
 }
