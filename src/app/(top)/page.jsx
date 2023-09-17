@@ -40,7 +40,6 @@ const DUMMY_DATE = [
 
 export default function Home() {
   return (
-    
     <div className="p-4">
       <VerticalChefList chefs={DUMMY_DATE} />
     </div>
