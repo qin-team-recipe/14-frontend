@@ -56,7 +56,7 @@ export function ShoppingList() {
     return (
       <div className="flex items-center justify-between gap-4">
         <button>
-          <IconCircle className=" text-red-400 flex-none" />
+          <IconCircle className=" flex-none text-red-400" />
         </button>
         <p className="flex-grow break-normal text-lg">{name}</p>
         <button>
