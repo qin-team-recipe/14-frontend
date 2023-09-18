@@ -35,8 +35,12 @@ export function ShoppingList() {
     <div>
       <div className="flex bg-gray-100 px-4 pb-3 pt-5">
         <div className="flex-1 font-bold">じぶんメモ</div>
-        <IconPlus />
-        <IconDotsCircleHorizontal className="ml-4" />
+        <button>
+          <IconPlus />
+        </button>
+        <button>
+          <IconDotsCircleHorizontal className="ml-4" />
+        </button>
       </div>
       <div>
         {ingredients.map((ingredient) => (
@@ -51,9 +55,13 @@ export function ShoppingList() {
   function IngredientList({ name }) {
     return (
       <div className="flex items-center justify-between gap-4">
-        <IconCircle className=" text-red-400" />
+        <button>
+          <IconCircle className=" text-red-400 flex-none" />
+        </button>
         <p className="flex-grow break-normal text-lg">{name}</p>
-        <IconDotsVertical className="flex-none text-gray-300" />
+        <button>
+          <IconDotsVertical className="flex-none text-gray-300" />
+        </button>
       </div>
     );
   }
