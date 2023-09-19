@@ -1,5 +1,5 @@
 import { AuthScreen } from "@/components/Auth";
-import { ListBar } from "@/components/Bar";
+// import { ListBar } from "@/components/Bar";
 import src from "~/images/cookingGirl.png";
 import { ShoppingList } from "../shoppingList/ShoppingList";
 
@@ -8,7 +8,7 @@ export default function List() {
 
   return (
     <div className="">
-      <ListBar />
+      {/* <ListBar /> */}
       {isSignedIn ? <ShoppingList /> : <AuthScreen src={src} />}
     </div>
   );

@@ -33,6 +33,9 @@ export function ShoppingList() {
 
   return (
     <div>
+      <div className="bg-gray-100  flex font-bold justify-center text-lg py-3 border-b">
+        買い物リスト
+      </div>
       <div className="flex bg-gray-100 px-4 pb-3 pt-5">
         <div className="flex-1 font-bold">じぶんメモ</div>
         <button>
@@ -44,7 +47,7 @@ export function ShoppingList() {
       </div>
       <div>
         {ingredients.map((ingredient) => (
-          <div className="border px-7 py-2" key={ingredient.id}>
+          <div className="border px-4 py-2" key={ingredient.id}>
             <IngredientList key={ingredient.id} name={ingredient.name} />
           </div>
         ))}
@@ -60,7 +63,7 @@ export function ShoppingList() {
         </button>
         <p className="flex-grow break-normal text-lg">{name}</p>
         <button>
-          <IconDotsVertical className="flex-none text-gray-300" />
+          <IconDotsVertical className="flex-none text-gray-400" />
         </button>
       </div>
     );
