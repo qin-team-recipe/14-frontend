@@ -1,5 +1,4 @@
 import { Navigation } from "../_components/Navigation";
-import { Tabs } from "@/components/Tabs";
 
 export default function TopLayout({ children }) {
   return (
@@ -7,18 +6,6 @@ export default function TopLayout({ children }) {
       <Navigation />
       <main className="w-full overflow-hidden border-gray-200 pb-5 sm:border-x">
         {children}
-        <Tabs
-          tabItems={[
-            {
-              label: "新着レシピ",
-              href: "/profile/[slug]/",
-            },
-            {
-              label: "人気レシピ",
-              href: "/profile/[slug]/newrecipe",
-            },
-          ]}
-        />
       </main>
     </div>
   );
