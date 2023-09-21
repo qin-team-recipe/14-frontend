@@ -1,1 +1,1 @@
-export { VerticalChefImage } from "./VerticalChefImage";
+export { VerticalChefList } from "./VerticalChefList";
