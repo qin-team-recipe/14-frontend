@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Zen_Antique } from "@next/font/google";
+import { Zen_Antique } from "next/font/google";
 import clsx from "clsx";
 
 const ZenAntique = Zen_Antique({
