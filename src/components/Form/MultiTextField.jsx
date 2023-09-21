@@ -17,7 +17,7 @@ export function MultiTextField({ name, addButtonElement, label, items }) {
             defaultValue={val.value}
             className={clsx(
               "w-full border-0 border-b px-4 py-2 focus:outline-none",
-              index === 0 && "border-t"
+              index === 0 && "border-t",
             )}
           />
         ))}

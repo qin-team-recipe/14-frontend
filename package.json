@@ -14,23 +14,26 @@
     "fix:prettier": "prettier --write ."
   },
   "dependencies": {
-    "@tabler/icons-react": "^2.23.0",
+    "@next/font": "^13.4.19",
+    "@tabler/icons-react": "^2.33.0",
     "clsx": "^2.0.0",
-    "next": "^13.4.13",
+    "date-fns": "^2.30.0",
+    "next": "^13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-textarea-autosize": "^8.5.2",
-    "sharp": "^0.32.4"
+    "react-textarea-autosize": "^8.5.3",
+    "sharp": "^0.32.5"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.14",
-    "eslint": "8.43.0",
-    "eslint-config-next": "^13.4.13",
-    "eslint-config-prettier": "^8.8.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.15",
+    "eslint": "^8.48.0",
+    "eslint-config-next": "^13.4.19",
+    "eslint-config-prettier": "^9.0.0",
     "npm-run-all": "^4.1.5",
-    "postcss": "8.4.24",
-    "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.3.0",
-    "tailwindcss": "3.3.2"
+    "postcss": "^8.4.29",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwindcss": "^3.3.3"
   }
 }
