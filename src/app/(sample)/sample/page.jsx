@@ -17,11 +17,11 @@ export default function Sample() {
       <div>マイページ画面</div>
       <MyPageMenu />
       <div>マイレシピ画面(2パターン対応)</div>
-      <MyRecipeMenu />
+      <MyRecipeMenu status="public" />
       <div>マイレシピ追加画面(2パターン対応)</div>
-      <CreateRecipeMenu />
+      <CreateRecipeMenu isEditable />
       <div>買い物リスト画面(2パターン対応)</div>
-      <ListMenu />
+      <ListMenu order={2} itemsLength={2} />
       <div>買い物リスト画面(自分メモアイテムメニュー)</div>
       <MemoItemMenu />
       <div>買い物リスト画面(レシピアイテムメニュー)</div>

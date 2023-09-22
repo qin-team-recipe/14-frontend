@@ -7,7 +7,6 @@ import {
   IconTrash,
 } from "@tabler/icons-react";
 import { Menu } from "./Menu";
-import { MenuItemContainer } from "./MenuItemContainer";
 
 // 買い物リスト画面のレシピがある場合のアイテムメニュー
 export function RecipeItemMenu() {
@@ -15,46 +14,29 @@ export function RecipeItemMenu() {
     <Menu
       items={[
         {
-          type: "item",
-          key: "show",
-          component: (
-            <MenuItemContainer icon={IconChefHat}>
-              <button onClick={() => {}}>レシピ詳細をみる</button>
-            </MenuItemContainer>
-          ),
+          type: "anchor",
+          href: "https://yahoo.co.jp/",
+          icon: IconChefHat,
+          text: "レシピ詳細をみる",
         },
         {
-          type: "item",
-          key: "down",
-          component: (
-            <MenuItemContainer icon={IconChevronDown}>
-              <button onClick={() => {}}>下に移動する</button>
-            </MenuItemContainer>
-          ),
+          type: "button",
+          onClick: () => alert("TODO: 下に移動する"),
+          icon: IconChevronDown,
+          text: "下に移動する",
+        },
+        { type: "divider" },
+        {
+          type: "button",
+          onClick: () => alert("TODO: 完了したアイテムだけ削除する"),
+          icon: IconCircleCheck,
+          text: "完了したアイテムだけ削除する",
         },
         {
-          type: "divider",
-          key: "divider1",
-        },
-        {
-          type: "item",
-          key: "check",
-          component: (
-            <MenuItemContainer icon={IconCircleCheck}>
-              <button onClick={() => {}}>完了したアイテムだけ削除する</button>
-            </MenuItemContainer>
-          ),
-        },
-        {
-          type: "item",
-          key: "delete",
-          component: (
-            <MenuItemContainer icon={IconTrash}>
-              <button onClick={() => {}}>
-                レシピを買い物リストから削除する
-              </button>
-            </MenuItemContainer>
-          ),
+          type: "button",
+          onClick: () => alert("TODO: レシピを買い物リストから削除する"),
+          icon: IconTrash,
+          text: "レシピを買い物リストから削除する",
         },
       ]}
     />
