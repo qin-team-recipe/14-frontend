@@ -1,0 +1,1 @@
+export { VerticalChefList } from "./VerticalChefList";

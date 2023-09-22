@@ -18,7 +18,7 @@ export function LoginButton({
         "rounded-md border px-3 py-2 hover:opacity-80",
         bgColor === "blue"
           ? "border-blue-500 bg-blue-500"
-          : "border-black bg-black"
+          : "border-black bg-black",
       )}
     >
       {Icon ? <Icon size={18} strokeWidth={3} /> : null}
