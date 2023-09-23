@@ -7,7 +7,7 @@ const ZenAntique = Zen_Antique({
   subsets: ["latin"],
 });
 
-export function ShowMore({ href, text }) {
+export function ShowMore({ href, text, showMore }) {
   return (
     <div className="flex items-center">
       {text ? (
@@ -17,7 +17,7 @@ export function ShowMore({ href, text }) {
         className="ml-auto font-bold text-gray-400 hover:underline"
         href={href}
       >
-        もっと見る
+        {showMore ? "もっと見る" : ""}
       </Link>
     </div>
   );
