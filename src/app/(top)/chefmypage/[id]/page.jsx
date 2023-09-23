@@ -2,7 +2,6 @@ import { Tabs } from "@/components/Tabs";
 import { ChefPageDetail } from "./_components/ChefPageDetail";
 
 export default function Profile({ id }) {
-  console.log("aaa");
   return (
     <div>
       <ChefPageDetail id={id} />
