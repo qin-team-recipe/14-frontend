@@ -1,4 +1,7 @@
+import { SearchBox } from "@/components/SearchBox";
 import { ShowMore } from "@/components/ShowMore";
+import { HorizontalChefList } from "./_components";
+import { HorizontalRecipeList } from "./_components";
 import { VerticalChefList } from "@/components/VerticalChefList";
 
 const DUMMY_DATE = [
@@ -41,11 +44,24 @@ const DUMMY_DATE = [
 
 export default function Home() {
   return (
-    <div className="p-4">
-      <div className="py-4">
-        <ShowMore href="/search/chef" text="シェフ" />
+    <>
+      <div className="flex flex-col gap-y-4 p-4">
+        <SearchBox />
+        <ShowMore href="#" text="注目のシェフ" showMore={false} />
+        <div className="pb-4">
+          <HorizontalChefList />
+        </div>
+
+        <div>
+          <ShowMore href="#" text="話題のレシピ" showMore />
+        </div>
+        <div className="pb-4">
+          <HorizontalRecipeList />
+        </div>
+
+        <ShowMore href="/search/chef" text="シェフ" showMore />
+        <VerticalChefList chefs={DUMMY_DATE} />
       </div>
-      <VerticalChefList chefs={DUMMY_DATE} />
-    </div>
+    </>
   );
 }
