@@ -17,6 +17,7 @@
     "@tabler/icons-react": "^2.33.0",
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
+    "embla-carousel-react": "^8.0.0-rc14",
     "next": "^13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
