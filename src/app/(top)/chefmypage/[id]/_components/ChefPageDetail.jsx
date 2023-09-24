@@ -4,7 +4,6 @@ import {
 } from "@tabler/icons-react";
 
 export function ChefPageDetail({ params }) {
-  // const { id } = ;
   console.log(params);
 
   return (
