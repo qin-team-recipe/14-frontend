@@ -1,8 +1,8 @@
 import { SearchBox } from "@/components/SearchBox";
 import { ShowMore } from "@/components/ShowMore";
 import { HorizontalChefList } from "./_components";
-import { HorizontalRecipeList } from "./_components";
 import { VerticalChefList } from "@/components/VerticalChefList";
+import { HorizontalRecipeList } from "@/components/HorizontalRecipeList";
 
 const DUMMY_DATE = [
   {
