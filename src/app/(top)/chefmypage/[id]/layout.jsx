@@ -4,10 +4,11 @@ import {
 } from "@tabler/icons-react";
 import { ChefProfileEditButton } from "./_components/ChefProfileEditButton";
 import { Tabs } from "@/components/Tabs";
+import { AddMyRecipeButton } from "@/components/Button";
 
 export default function ChefMyPageLayout({ children, params }) {
   return (
-    <div>
+    <div className="">
       <div>
         <div>
           <div className="px-4 py-3">
@@ -39,7 +40,7 @@ export default function ChefMyPageLayout({ children, params }) {
             ]}
           />
         </div>
-
+        <AddMyRecipeButton className="absolute bottom-0 left-0" />
         <div>{children}</div>
       </div>
     </div>
