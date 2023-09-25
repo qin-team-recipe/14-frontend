@@ -40,7 +40,9 @@ export default function ChefMyPageLayout({ children, params }) {
             ]}
           />
         </div>
-        <AddMyRecipeButton className="absolute bottom-0 left-0" />
+        <div className="fixed bottom-6 ">
+          <AddMyRecipeButton />
+        </div>
         <div>{children}</div>
       </div>
     </div>
