@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
@@ -40,6 +41,7 @@ const DUMMY_DATE = [
     image: "https://picsum.photos/140/150?random-7",
   },
 ];
+
 export function HorizontalChefList() {
   const [emblaRef] = useEmblaCarousel();
 
@@ -48,9 +50,9 @@ export function HorizontalChefList() {
       <div className="flex gap-4">
         {DUMMY_DATE.map((chef) => (
           <Link
-            className="relative flex flex-shrink-0 flex-col items-center justify-end"
+            className="relative flex-shrink-0"
             key={chef.id}
-            href="#"
+            href={`/profile/${chef.id}`}
           >
             <Image
               className="rounded-2xl"
@@ -58,11 +60,11 @@ export function HorizontalChefList() {
               src={chef.image}
               alt={chef.name}
               width={140}
-              height={150}
+              height={140}
             />
-            <p className="absolute mx-2 my-3 line-clamp-2 font-semibold text-white">
+            <div className="absolute bottom-2 line-clamp-2 px-2 font-semibold text-white">
               {chef.name}
-            </p>
+            </div>
           </Link>
         ))}
       </div>
