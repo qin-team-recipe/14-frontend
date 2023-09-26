@@ -1,4 +1,4 @@
-import { VerticalChefList } from "@/components/VerticalChefList";
+import { VerticalChefList } from "@/components/ChefList";
 
 //topページのDUMMY_DATEより数が多いです
 const DUMMY_DATE = [
