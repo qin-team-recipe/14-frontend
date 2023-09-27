@@ -83,7 +83,7 @@ export function HorizontalRecipeList() {
             <div className="mt-2 line-clamp-2 text-sm font-bold">
               {chef.recipeName}
             </div>
-            <div className="mt-0.5 line-clamp-1 text-xs text-gray-400">
+            <div className="mt-1 line-clamp-1 text-xs text-gray-500">
               {chef.chefName}
             </div>
           </Link>
