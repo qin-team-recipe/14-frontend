@@ -30,12 +30,11 @@ const CHEF_DATA = [
   },
 ];
 
-export function ChefImages() {
+export function SmallChefList() {
   const chefs = CHEF_DATA;
 
   return (
     <div className="space-y-3">
-      <h1 className="text-xl font-bold">シェフ</h1>
       <div className="flex gap-x-4">
         {chefs.map((chef) => (
           <ChefImage key={chef.id} name={chef.name} image={chef.image} />
