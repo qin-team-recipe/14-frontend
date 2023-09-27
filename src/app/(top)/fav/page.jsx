@@ -2,7 +2,6 @@ import { AuthScreen } from "@/components/Auth";
 import { FavBar } from "@/components/Bar";
 
 import { ChefImages } from "@/components/Chef";
-import { HorizontalRecipeList, VerticalRecipeList } from "@/components/Recipe";
 import src from "~/images/bakingGirl.png";
 
 export default function Fav() {
@@ -14,8 +13,6 @@ export default function Fav() {
       {isSignedIn ? (
         <div className="space-y-12">
           <ChefImages />
-          <HorizontalRecipeList />
-          <VerticalRecipeList />
         </div>
       ) : (
         <AuthScreen src={src} />
