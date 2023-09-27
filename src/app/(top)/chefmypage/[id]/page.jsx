@@ -1,3 +1,7 @@
-export default function Profile() {
-  return <div>Hello world</div>;
+export default function NewRecipe() {
+  return (
+    <div>
+      <img src="" alt="" />
+    </div>
+  );
 }

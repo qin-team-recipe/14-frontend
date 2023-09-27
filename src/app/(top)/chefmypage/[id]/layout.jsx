@@ -8,7 +8,7 @@ import { AddMyRecipeButton } from "@/components/Button";
 
 export default function ChefMyPageLayout({ children, params }) {
   return (
-    <div className="">
+    <div  className="relative">
       <div>
         <div>
           <div className="px-4 py-3">
@@ -40,9 +40,9 @@ export default function ChefMyPageLayout({ children, params }) {
             ]}
           />
         </div>
-        <div className="fixed bottom-6 ">
+        {/* <div className="absolute bottom--40 right--4">
           <AddMyRecipeButton />
-        </div>
+        </div> */}
         <div>{children}</div>
       </div>
     </div>
