@@ -1,7 +1,12 @@
 import { AuthScreen } from "@/components/Auth";
 import { FavBar } from "@/components/Bar";
+import { SmallChefList } from "@/components/ChefList";
+import {
+  HorizontalRecipeList,
+  VerticalRecipeList,
+} from "@/components/RecipeList";
 
-import { ChefImages } from "@/components/Chef";
+import { Section } from "@/components/Section";
 import src from "~/images/bakingGirl.png";
 
 export default function Fav() {
@@ -12,7 +17,15 @@ export default function Fav() {
       <FavBar />
       {isSignedIn ? (
         <div className="space-y-12">
-          <ChefImages />
+          <Section text="シェフ">
+            <SmallChefList />
+          </Section>
+          <Section text="新着レシピ" showMore href="#">
+            <HorizontalRecipeList />
+          </Section>
+          <Section text="お気に入りレシピ">
+            <VerticalRecipeList />
+          </Section>
         </div>
       ) : (
         <AuthScreen src={src} />
