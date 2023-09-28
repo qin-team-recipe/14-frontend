@@ -13,10 +13,12 @@ export default function Fav() {
   const isSignedIn = true;
 
   return (
-    <div className="px-4 py-3">
-      <FavBar />
+    <div className="flex flex-col gap-y-5 pb-20">
+      <div className="px-4 py-3">
+        <FavBar />
+      </div>
       {isSignedIn ? (
-        <div className="space-y-12">
+        <div className="space-y-12 px-4">
           <Section text="シェフ">
             <SmallChefList />
           </Section>

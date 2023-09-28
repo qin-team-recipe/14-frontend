@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { IconHeart } from "@tabler/icons-react";
 
 const DUMMY_DATE = [
   {
@@ -62,20 +61,18 @@ const DUMMY_DATE = [
 
 export function VerticalRecipeList() {
   return (
-    <div className="grid grid-cols-2 gap-3">
+    <div className="grid grid-cols-2 gap-4">
       {DUMMY_DATE.map((recipe) => (
-        <Link className="relative w-full" key={recipe.id} href="#TODO">
+        <Link key={recipe.id} href="#TODO">
           <Image
-            className="rounded-2xl"
+            className="w-full rounded-2xl"
             key={recipe.id}
             src={recipe.image}
             alt={recipe.recipeName}
             width={200}
             height={200}
           />
-          <div className="right-2 top-2 flex rounded-md border bg-red-200 p-1.5">
-            <IconHeart />
-          </div>
+
           <div className="mt-2 line-clamp-2 text-sm font-bold">
             {recipe.recipeName}
           </div>
