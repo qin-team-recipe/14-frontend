@@ -1,3 +1,4 @@
+"use client";
 import { AddMyRecipeButton } from "@/components/Button";
 import RecipeCard from "./_components/RecipeCard";
 
@@ -11,10 +12,11 @@ export default function NewRecipe() {
       />
     );
   });
+
   return (
     <div>
       <div className="grid grid-cols-2 gap-4">{chefCards}</div>
-      <div className="top-0  sticky">
+      <div className="fixed bottom-6">
         <AddMyRecipeButton />
       </div>
     </div>
