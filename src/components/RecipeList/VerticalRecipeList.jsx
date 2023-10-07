@@ -15,7 +15,7 @@ const DUMMY_DATE = [
     id: 2,
     recipeName:
       "トマトとルッコラのマルゲリータピザに合うホワイトソースグラタン",
-    chefName: "マイレシピ",
+    chefName: "マイシェフ",
 
     image: "https://picsum.photos/160/160?random-2",
   },

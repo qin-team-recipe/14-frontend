@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const CHEF_DATA = [
   {
     id: 1,
@@ -46,14 +48,14 @@ export function SmallChefList() {
 
 function ChefImage({ name, image }) {
   return (
-    <div className="flex flex-col items-center gap-y-1">
+    <Link href="#" className="flex flex-col items-center gap-y-1">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={image}
         alt={`${name}'s profile`}
         className="h-16 w-16 rounded-full"
       />
-      <p className="text-xs">{name}</p>
-    </div>
+      <div className="text-xs">{name}</div>
+    </Link>
   );
 }
