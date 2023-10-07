@@ -22,7 +22,7 @@ export default function Fav() {
           <Section text="シェフ">
             <SmallChefList />
           </Section>
-          <Section text="新着レシピ" showMore href="#">
+          <Section text="新着レシピ" showMore href="/new-recipes">
             <HorizontalRecipeList />
           </Section>
           <Section text="お気に入りレシピ">
