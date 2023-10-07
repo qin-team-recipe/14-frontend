@@ -1,3 +1,6 @@
+"use client";
+
+import useEmblaCarousel from "embla-carousel-react";
 import Link from "next/link";
 
 const CHEF_DATA = [
@@ -30,13 +33,45 @@ const CHEF_DATA = [
     image:
       "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
   },
+  {
+    id: 6,
+    name: "大塚シェフ",
+    image:
+      "https://plus.unsplash.com/premium_photo-1661299381229-1002c9d65f31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+  },
+  {
+    id: 7,
+    name: "大谷翔平",
+    image:
+      "https://plus.unsplash.com/premium_photo-1661595209842-21fb1409dc07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
+  },
+  {
+    id: 8,
+    name: "レオナルド・ダ・ヴィンチ",
+    image:
+      "https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1664&q=80",
+  },
+  {
+    id: 9,
+    name: "マーク・ザッカーバーグ",
+    image:
+      "https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1664&q=80",
+  },
+  {
+    id: 10,
+    name: "ビル・ゲイツ",
+    image:
+      "https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1664&q=80",
+  },
 ];
 
 export function SmallChefList() {
+  const [emblaRef] = useEmblaCarousel();
+
   const chefs = CHEF_DATA;
 
   return (
-    <div className="space-y-3">
+    <div ref={emblaRef} className="space-y-3">
       <div className="flex gap-x-4">
         {chefs.map((chef) => (
           <ChefImage key={chef.id} name={chef.name} image={chef.image} />
@@ -48,14 +83,17 @@ export function SmallChefList() {
 
 function ChefImage({ name, image }) {
   return (
-    <Link href="#" className="flex flex-col items-center gap-y-1">
+    <Link
+      href="#"
+      className="wｰ16 flex flex-shrink-0 flex-col items-center gap-y-1"
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={image}
         alt={`${name}'s profile`}
-        className="h-16 w-16 rounded-full"
+        className="h-16 w-16 rounded-full object-cover"
       />
-      <div className="text-xs">{name}</div>
+      <div className="line-clamp-1 text-xs">{name}</div>
     </Link>
   );
 }
