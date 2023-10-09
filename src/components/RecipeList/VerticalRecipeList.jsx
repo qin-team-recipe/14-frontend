@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { FavCountBadge } from "../Badge";
+import { RecipeBadge } from "./RecipeBadge";
 
 const DUMMY_DATA = [
   {
@@ -75,9 +75,11 @@ const DUMMY_DATA = [
 ];
 
 export function VerticalRecipeList() {
+  const recipes = DUMMY_DATA;
+
   return (
     <div className="grid grid-cols-2 gap-4">
-      {DUMMY_DATA.map((recipe) => (
+      {recipes.map((recipe) => (
         <Link key={recipe.id} href="#TODO" className="relative">
           <Image
             className="w-full rounded-2xl"
@@ -87,10 +89,9 @@ export function VerticalRecipeList() {
             width={200}
             height={200}
           />
-          <FavCountBadge isPublished={recipe.isPublished}>
-            {recipe.favCount.toLocaleString()}
-          </FavCountBadge>
-
+          <RecipeBadge>
+            {recipe.isPublished ? recipe.favCount : "非公開"}
+          </RecipeBadge>
           <div className="mt-2 line-clamp-2 text-sm font-bold">
             {recipe.recipeName}
           </div>

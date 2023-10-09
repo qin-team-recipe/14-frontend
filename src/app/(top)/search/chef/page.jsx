@@ -1,7 +1,7 @@
 import { VerticalChefList } from "@/components/ChefList";
 
-//topページのDUMMY_DATEより数が多いです
-const DUMMY_DATE = [
+//topページのDUMMY_DATAより数が多いです
+const DUMMY_DATA = [
   {
     id: 1,
     name: "ひふみシェフ",
@@ -75,5 +75,5 @@ const DUMMY_DATE = [
 ];
 
 export default function Chef() {
-  return <VerticalChefList chefs={DUMMY_DATE} />;
+  return <VerticalChefList chefs={DUMMY_DATA} />;
 }

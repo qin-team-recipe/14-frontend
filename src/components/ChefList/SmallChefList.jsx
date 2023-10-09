@@ -74,31 +74,23 @@ export function SmallChefList() {
     <div ref={emblaRef} className="space-y-3">
       <div className="flex gap-x-4">
         {chefs.map((chef) => (
-          <ChefImage
+          <Link
             key={chef.id}
-            id={chef.id}
-            name={chef.name}
-            image={chef.image}
-          />
+            href={`/profile/${chef.id}`}
+            className="flex flex-shrink-0 flex-col items-center gap-y-1"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={chef.image}
+              alt={`${chef.name}'s profile`}
+              className="h-16 w-16 rounded-full object-cover"
+            />
+            <div className="line-clamp-1 w-16 break-all text-xs">
+              {chef.name}
+            </div>
+          </Link>
         ))}
       </div>
     </div>
-  );
-}
-
-function ChefImage({ id, name, image }) {
-  return (
-    <Link
-      href={`/profile/${id}`}
-      className="flex flex-shrink-0 flex-col items-center gap-y-1"
-    >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={image}
-        alt={`${name}'s profile`}
-        className="h-16 w-16 rounded-full object-cover"
-      />
-      <div className="line-clamp-1 w-16 break-all text-xs">{name}</div>
-    </Link>
   );
 }

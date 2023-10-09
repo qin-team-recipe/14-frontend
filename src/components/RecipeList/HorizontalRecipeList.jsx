@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
-import { FavCountBadge } from "../Badge";
+import { RecipeBadge } from "./RecipeBadge";
 
 const DUMMY_DATA = [
   {
@@ -78,14 +78,16 @@ const DUMMY_DATA = [
 export function HorizontalRecipeList() {
   const [emblaRef] = useEmblaCarousel();
 
+  const recipes = DUMMY_DATA;
+
   return (
     <div ref={emblaRef}>
       <div className="flex gap-4">
-        {DUMMY_DATA.map((recipe) => (
+        {recipes.map((recipe) => (
           <Link
-            className="relative w-40 flex-shrink-0"
             key={recipe.id}
             href="#TODO"
+            className="relative w-40 flex-shrink-0"
           >
             <Image
               className="rounded-2xl"
@@ -95,9 +97,9 @@ export function HorizontalRecipeList() {
               width={160}
               height={160}
             />
-            <FavCountBadge isPublished={recipe.isPublished}>
-              {recipe.favCount.toLocaleString()}
-            </FavCountBadge>
+            <RecipeBadge>
+              {recipe.isPublished ? recipe.favCount : "非公開"}
+            </RecipeBadge>
             <div className="mt-2 line-clamp-2 text-sm font-bold">
               {recipe.recipeName}
             </div>

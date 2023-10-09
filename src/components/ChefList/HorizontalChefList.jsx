@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 
-const DUMMY_DATE = [
+const DUMMY_DATA = [
   {
     id: 1,
     name: "しまぶーシェフ",
@@ -48,7 +48,7 @@ export function HorizontalChefList() {
   return (
     <div ref={emblaRef}>
       <div className="flex gap-4">
-        {DUMMY_DATE.map((chef) => (
+        {DUMMY_DATA.map((chef) => (
           <Link
             className="relative flex-shrink-0"
             key={chef.id}
