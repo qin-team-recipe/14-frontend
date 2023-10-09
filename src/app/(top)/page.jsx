@@ -3,7 +3,7 @@ import { Section } from "@/components/Section";
 import { HorizontalRecipeList } from "@/components/RecipeList";
 import { VerticalChefList, HorizontalChefList } from "@/components/ChefList";
 
-const DUMMY_DATE = [
+const DUMMY_DATA = [
   {
     id: 1,
     name: "ひふみシェフ",
@@ -56,7 +56,7 @@ export default function Home() {
         </Section>
 
         <Section text="シェフ" href="/search/chef" showMore>
-          <VerticalChefList chefs={DUMMY_DATE} />
+          <VerticalChefList chefs={DUMMY_DATA} />
         </Section>
       </div>
     </div>
