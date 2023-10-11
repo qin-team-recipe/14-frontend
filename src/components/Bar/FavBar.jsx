@@ -15,7 +15,7 @@ export function FavBar() {
       }
       rightComponent={
         isSignedIn && (
-          <Link href="/fav">
+          <Link href="/my-page">
             <IconUserCircle stroke={1.5} />
           </Link>
         )
