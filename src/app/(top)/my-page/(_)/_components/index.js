@@ -1,1 +1,1 @@
-export { ProfileEditButton } from "./ProfileEditButton";
+export { ProfileEditLink } from "./ProfileEditLink";
