@@ -38,7 +38,7 @@ export default function MyPageLayout({ children }) {
         </div>
 
         <div className="mt-4">
-          <ProfileEditLink>プロフィールを編集する</ProfileEditLink>
+          <ProfileEditLink>プロフィールを編集</ProfileEditLink>
         </div>
       </div>
 
