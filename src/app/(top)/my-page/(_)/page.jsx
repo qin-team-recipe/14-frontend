@@ -1,6 +1,7 @@
 import { VerticalRecipeList } from "@/components/RecipeList";
 
-export default function myPage() {
+// マイページ（新着レシピ）
+export default function MyPage() {
   return (
     <div className="px-4 pt-5">
       <VerticalRecipeList />

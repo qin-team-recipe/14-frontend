@@ -1,12 +1,17 @@
+import clsx from "clsx";
 import Link from "next/link";
 
-export function RecipeAddLink() {
+export function RecipeAddLink({ children }) {
   return (
     <Link
       href="/my-recipe/new"
-      className="flex items-center justify-center rounded-full bg-red-500 px-5 py-3 text-white shadow-md hover:bg-red-400"
+      className={clsx(
+        "flex items-center justify-center",
+        "w-full rounded-full px-5 py-3",
+        "bg-red-500 font-bold text-white shadow-md shadow-red-800 hover:bg-red-400",
+      )}
     >
-      <span className="font-bold">マイレシピ</span>を追加する
+      {children}
     </Link>
   );
 }
