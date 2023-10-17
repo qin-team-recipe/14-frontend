@@ -5,4 +5,5 @@ export { ListBar } from "./ListBar";
 export { NewMyRecipeBar } from "./NewMyRecipeBar";
 export { NewRecipesBar } from "./NewRecipesBar";
 export { SettingsBar } from "./SettingsBar";
+export { SignUpBar } from "./SignUpBar";
 export { TosBar } from "./TosBar";
