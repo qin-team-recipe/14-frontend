@@ -1,5 +1,4 @@
 import { Tabs } from "@/components/Tabs";
-import { PrevButton } from "./_components/PrevButton";
 import { ProfileImage } from "./_components/ProfileImage";
 import { Sns } from "./_components/Sns";
 import { Counter } from "./_components/Counter";
@@ -11,7 +10,6 @@ export default function ProfileLayout({ children, params }) {
       <div className="py-3">
         <div className="flex flex-col gap-y-2 px-4">
           <div className="flex items-center">
-            <PrevButton />
             <div className="ml-auto">
               <Sns />
             </div>
