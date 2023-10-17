@@ -43,7 +43,7 @@ const DUMMY_DATA = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-y-5 p-4 pb-20">
+    <div className="flex flex-col gap-y-5 p-4">
       <SearchBox />
 
       <div className="space-y-12">

@@ -13,7 +13,7 @@ export default function Fav() {
   const isSignedIn = true;
 
   return (
-    <div className="flex flex-col gap-y-5 pb-20">
+    <div className="flex flex-col gap-y-5">
       <div className="px-4 py-3">
         <FavBar />
       </div>
