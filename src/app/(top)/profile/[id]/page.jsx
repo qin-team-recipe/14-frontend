@@ -1,7 +1,9 @@
+import { VerticalRecipeList } from "@/components/RecipeList";
+
 export default function ProfileTop() {
   return (
     <>
-      <div className="text-red-500">デフォルトページです</div>
+      <VerticalRecipeList />
     </>
   );
 }
