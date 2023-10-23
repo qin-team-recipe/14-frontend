@@ -1,10 +1,15 @@
+import Link from "next/link";
 import { SearchBox } from "@/components/SearchBox";
 import { Tabs } from "@/components/Tabs";
+import { IconArrowLeft } from "@tabler/icons-react";
 
 export default function SearchLayout({ children }) {
   return (
     <div>
-      <div className="p-4">
+      <div className="flex items-center gap-3 px-4 pt-2">
+        <Link href="/">
+          <IconArrowLeft className="text-gray-500" />
+        </Link>
         <SearchBox />
       </div>
       <Tabs
@@ -13,7 +18,7 @@ export default function SearchLayout({ children }) {
           { label: "シェフ", href: "/search/chef" },
         ]}
       />
-      <div className="p-4">{children}</div>
+      <div className="px-4 py-5">{children}</div>
     </div>
   );
 }
