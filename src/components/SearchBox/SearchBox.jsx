@@ -1,14 +1,21 @@
-import { IconSearch } from "@tabler/icons-react";
+"use client";
 
-export function SearchBox() {
+import { IconSearch, IconX } from "@tabler/icons-react";
+
+export function SearchBox({ hasCloseIcon }) {
   return (
-    <div className="flex w-full items-center gap-x-2 rounded-lg bg-gray-100 px-3">
-      <IconSearch className="h-6 w-6 text-gray-500" />
+    <div className="flex w-full items-center gap-x-2 rounded-lg bg-gray-100 px-3 py-2">
+      <IconSearch size={24} className="text-gray-500" />
       <input
         type="text"
         placeholder="シェフやレシピを検索"
-        className="w-full bg-transparent py-2 font-bold outline-none placeholder:text-gray-500"
+        className="w-full bg-transparent font-bold outline-none placeholder:text-gray-500"
       />
+      {hasCloseIcon ? (
+        <button onClick={() => alert("TODO: 検索テキストをクリアします")}>
+          <IconX size={24} className="text-gray-500" />
+        </button>
+      ) : null}
     </div>
   );
 }

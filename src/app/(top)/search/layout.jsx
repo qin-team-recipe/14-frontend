@@ -6,11 +6,11 @@ import { IconArrowLeft } from "@tabler/icons-react";
 export default function SearchLayout({ children }) {
   return (
     <div>
-      <div className="flex items-center gap-3 px-4 pt-2">
+      <div className="flex items-center gap-3 p-4">
         <Link href="/">
           <IconArrowLeft className="text-gray-500" />
         </Link>
-        <SearchBox />
+        <SearchBox hasCloseIcon />
       </div>
       <Tabs
         tabItems={[
