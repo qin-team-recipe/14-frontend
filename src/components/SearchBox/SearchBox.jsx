@@ -11,11 +11,11 @@ export function SearchBox({ hasCloseIcon }) {
         placeholder="シェフやレシピを検索"
         className="w-full bg-transparent font-bold outline-none placeholder:text-gray-500"
       />
-      {hasCloseIcon ? (
+      {hasCloseIcon && (
         <button onClick={() => alert("TODO: 検索テキストをクリアします")}>
           <IconX size={24} className="text-gray-500" />
         </button>
-      ) : null}
+      )}
     </div>
   );
 }
