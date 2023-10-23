@@ -74,6 +74,7 @@ const DUMMY_DATA = [
   },
 ];
 
+// 検索画面（シェフ部分）
 export default function Chef() {
   return <VerticalChefList chefs={DUMMY_DATA} />;
 }
