@@ -76,5 +76,10 @@ const DUMMY_DATA = [
 
 // 検索画面（シェフ部分）
 export default function Chef() {
-  return <VerticalChefList chefs={DUMMY_DATA} />;
+  return (
+    <div className="space-y-2">
+      <div className="text-xl font-bold">シェフ一覧</div>
+      <VerticalChefList chefs={DUMMY_DATA} />
+    </div>
+  );
 }
