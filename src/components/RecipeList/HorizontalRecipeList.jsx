@@ -86,7 +86,7 @@ export function HorizontalRecipeList() {
         {recipes.map((recipe) => (
           <Link
             key={recipe.id}
-            href="#TODO"
+            href={`recipe/${recipe.id}`}
             className="relative w-40 flex-shrink-0"
           >
             <Image
