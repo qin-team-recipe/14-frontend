@@ -75,10 +75,12 @@ const DUMMY_DATA = [
 ];
 
 // 検索画面（シェフ部分）
-export default function Chef() {
+export default function Chef({ searchParams }) {
   return (
     <div className="space-y-2">
-      <div className="text-xl font-bold">シェフ一覧</div>
+      <div className="text-xl font-bold">
+        {searchParams.q ? `「${searchParams.q}」で検索` : "シェフ一覧"}
+      </div>
       <VerticalChefList chefs={DUMMY_DATA} />
     </div>
   );
