@@ -19,7 +19,7 @@ export default function New() {
 
   return (
     <div>
-      <div className="px-4 py-3">
+      <div className="px-4 py-3 border-b">
         <NewMyRecipeBar />
       </div>
       <div className="mt-4 space-y-8">
