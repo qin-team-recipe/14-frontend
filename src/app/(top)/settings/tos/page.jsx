@@ -4,7 +4,7 @@ import { TosBar } from "@/components/Bar";
 export default function TermsOfService() {
   return (
     <div>
-      <div className="px-4 py-3">
+      <div className="px-4 py-3 border-b">
         <TosBar />
       </div>
       <div

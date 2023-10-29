@@ -13,7 +13,7 @@ export default function Edit() {
 
   return (
     <div>
-      <div className="px-4 py-3">
+      <div className="px-4 py-3 border-b">
         <EditBar />
       </div>
       <div className="mt-4 space-y-8">

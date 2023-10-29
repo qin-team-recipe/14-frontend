@@ -11,7 +11,7 @@ import { ButtonBlock, LinkBlock } from "./_components";
 export default function Settings() {
   return (
     <div>
-      <div className="px-4 py-3">
+      <div className="px-4 py-3 border-b">
         <SettingsBar />
       </div>
       <div className="space-y-8 pt-5">

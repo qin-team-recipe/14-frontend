@@ -4,7 +4,7 @@ import { CommonButton, TextField } from "@/components/Form";
 export default function SignUp() {
   return (
     <div>
-      <div className="px-4 py-3">
+      <div className="px-4 py-3 border-b">
         <SignUpBar />
       </div>
       <div className="mb-12 mt-5 space-y-8">
