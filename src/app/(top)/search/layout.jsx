@@ -10,7 +10,7 @@ export default function SearchLayout({ children }) {
         <Link href="/">
           <IconArrowLeft className="text-gray-500" />
         </Link>
-        <SearchBox hasCloseIcon />
+        <SearchBox />
       </div>
       <Tabs
         tabItems={[
