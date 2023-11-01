@@ -13,12 +13,9 @@ export function SearchBox() {
   const [isPending, startTransition] = useTransition();
 
   // 検索処理
-  // MEMO: routerのpushとreplaceの使い分け
-  // startTransitionの引数は同期関数じゃないの？
   const handleSearch = useCallback(
     (term) => {
       startTransition(async () => {
-        // スリープ処理
         await sleep(1000);
         const params = new URLSearchParams(searchParams);
         // 検索情報の有無に応じて、パラメータ操作
@@ -29,10 +26,8 @@ export function SearchBox() {
         }
         // パスが初期URLかどうかチェック
         if (pathname === "/") {
-          // historyにエントリー追加して遷移
           router.push(`search/recipe?${params.toString()}`);
         } else {
-          // historyにエントリー追加せず遷移
           router.replace(`${pathname}?${params.toString()}`);
         }
       });
@@ -40,8 +35,8 @@ export function SearchBox() {
     [pathname, router, searchParams],
   );
 
-  // 検索リセット処理
-  const handleReset = () => {
+  // リセット処理
+  const handleReset = useCallback(() => {
     startTransition(async () => {
       await sleep(500);
       const params = new URLSearchParams(searchParams);
@@ -49,7 +44,7 @@ export function SearchBox() {
       ref.current.value = "";
       router.replace(pathname);
     });
-  };
+  }, [pathname, router, searchParams]);
 
   return (
     <div className="flex w-full items-center gap-x-2 rounded-lg bg-gray-100 px-3 py-2">
@@ -62,10 +57,10 @@ export function SearchBox() {
         defaultValue={query}
         className="w-full bg-transparent font-bold outline-none placeholder:text-gray-500"
       />
-      {isPending && (
+
+      {isPending ? (
         <IconLoader2 size={24} className="animate-spin text-gray-500" />
-      )}
-      {query && !isPending ? (
+      ) : query ? (
         <button onClick={handleReset}>
           <IconX size={24} className="text-gray-500" />
         </button>
@@ -74,7 +69,7 @@ export function SearchBox() {
   );
 }
 
-// スリープ処理(ミリ秒後に解決する)
+// スリープ処理
 export function sleep(ms) {
   // eslint-disable-next-line no-undef
   return new Promise((resolve) => {
