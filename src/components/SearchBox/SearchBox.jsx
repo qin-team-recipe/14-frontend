@@ -6,6 +6,7 @@ import { IconSearch, IconX, IconLoader2 } from "@tabler/icons-react";
 
 export function SearchBox() {
   const ref = useRef(null);
+  const navigationTimeout = useRef(null); // タイマーを管理するref
   const searchParams = useSearchParams();
   const query = searchParams.get("q")?.toString();
   const pathname = usePathname();
@@ -15,21 +16,28 @@ export function SearchBox() {
   // 検索処理
   const handleSearch = useCallback(
     (term) => {
+      // タイマーがある場合クリア
+      if (navigationTimeout.current) {
+        clearTimeout(navigationTimeout.current);
+      }
+
       startTransition(async () => {
-        await sleep(1000);
-        const params = new URLSearchParams(searchParams);
-        // 検索情報の有無に応じて、パラメータ操作
-        if (term) {
-          params.set("q", term);
-        } else {
-          params.delete("q");
-        }
-        // パスが初期URLかどうかチェック
-        if (pathname === "/") {
-          router.push(`search/recipe?${params.toString()}`);
-        } else {
-          router.replace(`${pathname}?${params.toString()}`);
-        }
+        // 500ミリ秒遅延後にナビゲーション実行
+        navigationTimeout.current = setTimeout(async () => {
+          const params = new URLSearchParams(searchParams);
+          // 検索情報の有無に応じて、パラメータ操作
+          if (term) {
+            params.set("q", term);
+          } else {
+            params.delete("q");
+          }
+          // パスが初期URLかどうかチェック
+          if (pathname === "/") {
+            router.push(`/search/recipe?${params.toString()}`);
+          } else {
+            router.replace(`${pathname}?${params.toString()}`);
+          }
+        }, 500);
       });
     },
     [pathname, router, searchParams],
