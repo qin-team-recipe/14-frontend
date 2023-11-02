@@ -1,7 +1,9 @@
+import { VerticalRecipeList } from "@/components/RecipeList";
+
 export default function ProfilePopular() {
   return (
-    <>
-      <div className="text-red-500">人気レシピページです</div>
-    </>
+    <div className="p-4">
+      <VerticalRecipeList />
+    </div>
   );
 }

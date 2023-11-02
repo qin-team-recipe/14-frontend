@@ -2,7 +2,7 @@ import Link from "next/link";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { Bar } from "./Bar";
 
-export function BarWithBackLink({ title, href }) {
+export function BarWithBackLink({ title, href, ...props }) {
   return (
     <Bar
       leftComponent={
@@ -13,6 +13,7 @@ export function BarWithBackLink({ title, href }) {
           <span className="text-xl font-bold">{title}</span>
         </div>
       }
+      {...props}
     />
   );
 }

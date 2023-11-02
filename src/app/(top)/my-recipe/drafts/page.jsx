@@ -7,10 +7,8 @@ import { format } from "date-fns";
 export default function Draft() {
   return (
     <div>
-      <div className="px-4 py-3">
-        <DraftBar />
-      </div>
-      <div className="divide-y border-y">
+      <DraftBar />
+      <div className="divide-y border-b">
         {DRAFTS.map((draft) => (
           <Link
             // TODO: 正しいパスに変更

@@ -5,10 +5,7 @@ import { VerticalRecipeList } from "@/components/RecipeList";
 export default function NewRecipes() {
   return (
     <div>
-      <div className="px-4 py-3">
-        <NewRecipesBar />
-      </div>
-
+      <NewRecipesBar />
       <div className="px-4 pt-5">
         <VerticalRecipeList />
       </div>
