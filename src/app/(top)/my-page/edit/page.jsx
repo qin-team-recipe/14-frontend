@@ -13,9 +13,7 @@ export default function Edit() {
 
   return (
     <div>
-      <div className="px-4 py-3">
-        <EditBar />
-      </div>
+      <EditBar />
       <div className="mt-4 space-y-8">
         <TextField label="ニックネーム" name="name" />
         <ImageField label="プロフィール画像（任意）" name="image" />

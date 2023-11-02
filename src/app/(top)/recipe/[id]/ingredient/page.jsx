@@ -1,12 +1,17 @@
-import { AddAllToCartButton } from "./AddAllToCartButton";
-import { AddToCartButton } from "./AddToCartButton";
+import { AddAllToCartButton, AddToCartButton } from "./_components";
 
-export function IngredientList({ servingsCount, ingredients }) {
+export default function Ingredient() {
+  const ingredients = [
+    { id: 1, text: "キャベツ" },
+    { id: 2, text: "ニンジン" },
+    { id: 3, text: "レタス" },
+  ];
+
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 pt-5">
       <div className="flex justify-between px-4">
         {/* ○人前の仕様は将来的に変わるかもしれないです */}
-        <p className="text-xl font-bold">{servingsCount}人前</p>
+        <p className="text-xl font-bold">2人前</p>
         <AddAllToCartButton />
       </div>
 
