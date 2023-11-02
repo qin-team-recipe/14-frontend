@@ -6,7 +6,7 @@ import { IconSearch, IconX, IconLoader2 } from "@tabler/icons-react";
 
 export function SearchBox() {
   const ref = useRef(null);
-  const navigationTimeout = useRef(null); // タイマーを管理するref
+  const navigationTimer = useRef(null); // タイマーを管理するref
   const searchParams = useSearchParams();
   const query = searchParams.get("q")?.toString();
   const pathname = usePathname();
@@ -16,14 +16,14 @@ export function SearchBox() {
   // 検索処理
   const handleSearch = useCallback(
     (term) => {
-      // タイマーがある場合クリア
-      if (navigationTimeout.current) {
-        clearTimeout(navigationTimeout.current);
-      }
-
       startTransition(async () => {
-        // 500ミリ秒遅延後にナビゲーション実行
-        navigationTimeout.current = setTimeout(async () => {
+        // 現在のタイマーが存在するならばクリア
+        if (navigationTimer.current) {
+          clearTimeout(navigationTimer.current);
+        }
+
+        // ナビゲーションを遅延させる新しいタイマー作成
+        navigationTimer.current = setTimeout(async () => {
           const params = new URLSearchParams(searchParams);
           // 検索情報の有無に応じて、パラメータ操作
           if (term) {
@@ -78,7 +78,7 @@ export function SearchBox() {
 }
 
 // スリープ処理
-export function sleep(ms) {
+function sleep(ms) {
   // eslint-disable-next-line no-undef
   return new Promise((resolve) => {
     return setTimeout(resolve, ms);
