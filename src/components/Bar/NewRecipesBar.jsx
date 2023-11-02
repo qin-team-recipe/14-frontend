@@ -1,5 +1,5 @@
 import { BarWithBackLink } from "./BarWithBackLink";
 
-export function NewRecipesBar() {
-  return <BarWithBackLink href="/fav" title="新着レシピ" />;
+export function NewRecipesBar(props) {
+  return <BarWithBackLink href="/fav" title="新着レシピ" {...props} />;
 }

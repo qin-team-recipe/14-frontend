@@ -4,9 +4,7 @@ import { TosBar } from "@/components/Bar";
 export default function TermsOfService() {
   return (
     <div>
-      <div className="px-4 py-3 border-b">
-        <TosBar />
-      </div>
+      <TosBar />
       <div
         className="prose prose-sm px-4"
         dangerouslySetInnerHTML={{ __html: DATA }}
