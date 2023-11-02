@@ -2,7 +2,7 @@ import { IconUserCircle, IconMenu } from "@tabler/icons-react";
 import Link from "next/link";
 import { Bar } from "./Bar";
 
-export function FavBar() {
+export function FavBar(props) {
   // 将来的にはロジックをちゃんと書く
   const isSignedIn = true;
 
@@ -20,6 +20,7 @@ export function FavBar() {
           </Link>
         )
       }
+      {...props}
     >
       お気に入り
     </Bar>

@@ -19,9 +19,7 @@ export default function New() {
 
   return (
     <div>
-      <div className="px-4 py-3 border-b">
-        <NewMyRecipeBar />
-      </div>
+      <NewMyRecipeBar />
       <div className="mt-4 space-y-8">
         {/* レシピ名フィールド */}
         <TextField label="レシピ名" name="name" placeholder="例：肉じゃが" />

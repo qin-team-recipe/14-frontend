@@ -14,9 +14,7 @@ export default function Fav() {
 
   return (
     <div className="flex flex-col gap-y-5">
-      <div className="px-4 py-3 border-b">
-        <FavBar />
-      </div>
+      <FavBar />
       {isSignedIn ? (
         <div className="space-y-12 px-4">
           <Section text="シェフ">
