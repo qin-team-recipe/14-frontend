@@ -6,7 +6,11 @@ export function VerticalChefList({ chefs }) {
   return (
     <div className="flex flex-col gap-5 gap-y-5">
       {chefs.map((chef) => (
-        <Link key={chef.id} href="#" className="flex space-x-4">
+        <Link
+          key={chef.id}
+          href={`/profile/${chef.id}`}
+          className="flex space-x-4"
+        >
           <Image
             className="shrink-0 rounded-2xl"
             key={chef.id}
