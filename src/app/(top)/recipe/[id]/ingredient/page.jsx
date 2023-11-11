@@ -1,3 +1,4 @@
+import { CopyButton } from "../_components";
 import { AddAllToCartButton, AddToCartButton } from "./_components";
 
 export default function Ingredient() {
@@ -26,6 +27,10 @@ export default function Ingredient() {
           </li>
         ))}
       </ul>
+
+      <div className="flex justify-end px-4">
+        <CopyButton items={ingredients} />
+      </div>
     </div>
   );
 }
