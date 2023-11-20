@@ -80,6 +80,10 @@ export function HorizontalRecipeList() {
 
   const recipes = DUMMY_DATA;
 
+  const handleLinkClick = () => {
+    // セッションストレージ上書き
+    sessionStorage.setItem("previousPageUrl", "");
+  };
   return (
     <div ref={emblaRef}>
       <div className="flex gap-4">
@@ -87,6 +91,7 @@ export function HorizontalRecipeList() {
           <Link
             key={recipe.id}
             href={`/recipe/${recipe.id}`}
+            onClick={handleLinkClick}
             className="relative w-40 flex-shrink-0"
           >
             <Image

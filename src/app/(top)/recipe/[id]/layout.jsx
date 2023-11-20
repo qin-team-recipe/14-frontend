@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import { DetailLayout } from "@/components/Layout";
 import { FavoriteButton } from "./_components";
 import { Sns } from "@/components/Sns";
+import { EditRecipe } from "./_components";
+import { IconArrowLeft } from "@tabler/icons-react";
 
 export default function MyRecipeLayout({ children, params }) {
   return (
@@ -34,8 +39,24 @@ function RecipeDetail({
   chefName,
   favCount,
 }) {
+  // 公開非公開
+  const [isPublished, setIsPublished] = useState(false);
+  const handleClick = () => {
+    setIsPublished((prevState) => !prevState);
+  };
+  // 遷移元URL
+  const TransitionSourceUrl = sessionStorage.getItem("previousPageUrl");
+  const isUrlEqual = TransitionSourceUrl === "/fav";
+
   return (
-    <div>
+    <>
+      <div className="absolute top-4">
+        {isUrlEqual && (
+          <Link href="/fav">
+            <IconArrowLeft />
+          </Link>
+        )}
+      </div>
       <div className="space-y-4">
         <div className="flex">
           <div className="text-xl font-bold">{recipeName}</div>
@@ -46,18 +67,30 @@ function RecipeDetail({
         <div className="text-sm">{description}</div>
         <div className="flex gap-4">
           <div className="flex items-center gap-1 text-xs text-gray-500">
-            <div className="h-3 w-3 rounded-full bg-gray-200"></div>
-            <Link href={`${chefHref}`}>{chefName}</Link>
+            {isUrlEqual && (
+              <div className="rounded border px-1.5 py-0.5">
+                {(isPublished && "公開") || "非公開"}
+              </div>
+            )}
+
+            {isUrlEqual || (
+              <div className="h-3 w-3 rounded-full bg-gray-200"></div>
+            )}
+            {isUrlEqual || <Link href={`${chefHref}`}>{chefName}</Link>}
           </div>
-          <div className="text-xs text-gray-500">
+          <div className="text-gray-500">
             <span className="font-bold">{favCount}</span> お気に入り
           </div>
         </div>
       </div>
 
-      <div className="mt-4">
+      <div className="mt-4 flex gap-4">
         <FavoriteButton />
+        {/* handleClickで公開非公開を切り替える */}
+        {isUrlEqual && (
+          <EditRecipe isPublished={isPublished} handleClick={handleClick} />
+        )}
       </div>
-    </div>
+    </>
   );
 }
