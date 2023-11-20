@@ -10,11 +10,11 @@ import {
 import { Menu } from "./Menu";
 
 // マイレシピ画面で使用するメニュー
-export function MyRecipeMenu({ status }) {
+export function MyRecipeMenu({ status, handleClick }) {
   const items = [
     {
       type: "anchor",
-      href: "https://yahoo.co.jp/",
+      href: "#",
       icon: IconEdit,
       text: "編集する",
     },
@@ -28,7 +28,7 @@ export function MyRecipeMenu({ status }) {
           },
           {
             type: "button",
-            onClick: () => alert("TODO: レシピを非公開にする"),
+            onClick: () => handleClick(),
             icon: IconLock,
             text: "レシピを非公開にする",
           },
@@ -36,7 +36,7 @@ export function MyRecipeMenu({ status }) {
       : [
           {
             type: "button",
-            onClick: () => alert("TODO: レシピを公開にする"),
+            onClick: () => handleClick(),
             icon: IconLockOpen,
             text: "レシピを公開にする",
           },
