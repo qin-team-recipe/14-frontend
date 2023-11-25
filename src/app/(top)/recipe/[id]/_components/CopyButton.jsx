@@ -4,12 +4,9 @@ import { IconCopy } from "@tabler/icons-react";
 
 export function CopyButton({ items }) {
   const copyToClipboard = () => {
-    // テキスト結合
-    const methodText = items.reduce((prev, current, index) => {
-      return prev + `${index + 1}. ${current.text}\n\n`;
-    }, "");
-    // クリップボードにコピー
-    window.navigator.clipboard.writeText(methodText);
+    const textArray = items.map(({ text }, i) => `${i + 1}. ${text}`);
+    const copyText = textArray.join("\n\n");
+    window.navigator.clipboard.writeText(copyText);
   };
 
   return (
