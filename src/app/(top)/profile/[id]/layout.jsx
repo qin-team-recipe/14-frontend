@@ -55,7 +55,7 @@ function Profile({ id }) {
       </div>
 
       <div className="mt-4">
-        <FollowButton>フォローする</FollowButton>
+        <FollowButton />
       </div>
     </div>
   );

@@ -80,7 +80,11 @@ export function VerticalRecipeList() {
   return (
     <div className="grid grid-cols-2 gap-4">
       {recipes.map((recipe) => (
-        <Link key={recipe.id} href="#TODO" className="relative">
+        <Link
+          key={recipe.id}
+          href={`/recipe/${recipe.id}`}
+          className="relative"
+        >
           <Image
             className="w-full rounded-2xl"
             key={recipe.id}
