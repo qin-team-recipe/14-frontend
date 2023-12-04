@@ -13,17 +13,17 @@ export function EditRecipe({ isPublished, setIsPublished }) {
     setIsPublished((prevState) => !prevState);
   };
   return (
-        <DropdownMenu>
-          <DropdownMenuTrigger>
-            <IconDotsCircleHorizontal stroke={1.5} />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuSeparator />
-            <MyRecipeMenu
-              status={isPublished && "public"}
-              handleClick={handleClick}
-            />
-          </DropdownMenuContent>
-        </DropdownMenu>
+    <DropdownMenu>
+      <DropdownMenuTrigger>
+        <IconDotsCircleHorizontal stroke={1.5} />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuSeparator />
+        <MyRecipeMenu
+          status={isPublished && "public"}
+          handleClick={handleClick}
+        />
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
