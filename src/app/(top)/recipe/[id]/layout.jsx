@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import { DetailLayout } from "@/components/Layout";
-import { FavoriteButton } from "./_components";
-import { Sns } from "@/components/Sns";
-import { EditRecipe } from "./_components";
 import { IconArrowLeft } from "@tabler/icons-react";
+import { SnsMyRecipe } from "./_components/SnsMyrecipe";
+import { FavoriteButton } from "./_components";
+import clsx from "clsx";
 
 export default function MyRecipeLayout({ children, params }) {
   return (
@@ -19,7 +19,7 @@ export default function MyRecipeLayout({ children, params }) {
           chefHref={`/profile/${params.id}`}
           description="はじめてでも失敗なく作れるような、鶏肉や玉ねぎを具とした基本的なマカロニグラタンのレシピです。ソースと具材炒めを別器具で行うレシピも多いですが、グラタンの具を炒めたフライパンの中で、そのままホワイトソースを仕上げる手軽な作り方にしています。ぜひお試しください。"
           favCount={1234}
-          isAdded
+          chefId={1}
         />
       }
       tabItems={[
@@ -38,20 +38,21 @@ function RecipeDetail({
   chefHref,
   chefName,
   favCount,
+  chefId,
 }) {
   // 公開非公開
   const [isPublished, setIsPublished] = useState(false);
-  const handleClick = () => {
-    setIsPublished((prevState) => !prevState);
-  };
-  // 遷移元URL
-  const TransitionSourceUrl = sessionStorage.getItem("previousPageUrl");
-  const isUrlEqual = TransitionSourceUrl === "/fav";
 
+  //ログインユーザー（自分のIDです）
+  const DUMMY_ID = {
+    userId: 1,
+  };
+
+  const isEqual = chefId === DUMMY_ID.userId;
   return (
     <>
       <div className="absolute top-4">
-        {isUrlEqual && (
+        {isEqual && (
           <Link href="/fav">
             <IconArrowLeft />
           </Link>
@@ -61,22 +62,32 @@ function RecipeDetail({
         <div className="flex">
           <div className="text-xl font-bold">{recipeName}</div>
           <div className="ml-4">
-            <Sns />
+            <SnsMyRecipe
+              isPublished={isPublished}
+              setIsPublished={setIsPublished}
+            />
           </div>
         </div>
         <div className="text-sm">{description}</div>
         <div className="flex gap-4">
-          <div className="flex items-center gap-1 text-xs text-gray-500">
-            {isUrlEqual && (
-              <div className="rounded border px-1.5 py-0.5">
-                {(isPublished && "公開") || "非公開"}
+          <div className="flex items-center gap-1 text-xs ">
+            {isEqual && (
+              <div
+                className={clsx(
+                  "rounded border px-1.5 py-0.5",
+                  isPublished
+                    ? "border-[#E54D2E] text-[#CA3214]"
+                    : "text-gray-500",
+                )}
+              >
+                {(isPublished && "公開中") || "非公開"}
               </div>
             )}
 
-            {isUrlEqual || (
+            {isEqual || (
               <div className="h-3 w-3 rounded-full bg-gray-200"></div>
             )}
-            {isUrlEqual || <Link href={`${chefHref}`}>{chefName}</Link>}
+            {isEqual || <Link href={`${chefHref}`}>{chefName}</Link>}
           </div>
           <div className="text-gray-500">
             <span className="font-bold">{favCount}</span> お気に入り
@@ -86,10 +97,12 @@ function RecipeDetail({
 
       <div className="mt-4 flex gap-4">
         <FavoriteButton />
-        {/* handleClickで公開非公開を切り替える */}
-        {isUrlEqual && (
-          <EditRecipe isPublished={isPublished} handleClick={handleClick} />
-        )}
+        <Link
+          className="block w-full rounded border border-black px-3 py-1 text-center text-sm"
+          href={"/my-recipe/new"}
+        >
+          レシピを編集する
+        </Link>
       </div>
     </>
   );
