@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { RecipeBadge } from "./RecipeBadge";
-import { usePathname } from "next/navigation";
 
 const DUMMY_DATA = [
   {
@@ -78,19 +77,12 @@ const DUMMY_DATA = [
 export function VerticalRecipeList() {
   const recipes = DUMMY_DATA;
 
-  const pathname = usePathname();
-  const handleLinkClick = () => {
-    // セッションストレージに現在のURLを保存
-    sessionStorage.setItem("previousPageUrl", pathname);
-  };
-
   return (
     <div className="grid grid-cols-2 gap-4">
       {recipes.map((recipe) => (
         <Link
           key={recipe.id}
-          href={`recipe/${recipe.id}`}
-          onClick={handleLinkClick}
+          href={`/recipe/${recipe.id}`}
           className="relative"
         >
           <Image
