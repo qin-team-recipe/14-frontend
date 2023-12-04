@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { DetailLayout } from "@/components/Layout";
 import { IconArrowLeft } from "@tabler/icons-react";
-import { SnsMyRecipe } from "./_components/SnsMyrecipe";
+import { SnsMyRecipe } from "./_components";
 import { FavoriteButton } from "./_components";
 import clsx from "clsx";
 
