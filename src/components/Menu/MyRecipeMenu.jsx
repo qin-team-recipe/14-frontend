@@ -14,7 +14,7 @@ export function MyRecipeMenu({ status, handleClick }) {
   const items = [
     {
       type: "anchor",
-      href: "#",
+      href: "/my-recipe/new",
       icon: IconEdit,
       text: "編集する",
     },

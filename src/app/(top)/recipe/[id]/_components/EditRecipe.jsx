@@ -1,42 +1,29 @@
-"use client";
-import { useState } from "react";
-import { Dropdown } from ".";
 import { MyRecipeMenu } from "@/components/Menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@radix-ui/react-dropdown-menu";
+import { IconDotsCircleHorizontal } from "@tabler/icons-react";
 
-export function EditRecipe({ isPublished, handleClick }) {
-  const [toggleDropdown, setToggleDropdown] = useState(false);
-  const handleToggle = () => {
-    setToggleDropdown((prevState) => !prevState);
+export function EditRecipe({ isPublished, setIsPublished }) {
+  //handleClickで公開非公開を切り替える
+  const handleClick = () => {
+    setIsPublished((prevState) => !prevState);
   };
-  const closeToggle = () => {
-    setToggleDropdown(false);
-  };
-
   return (
-    <>
-      <div className="relative w-full">
-        <button
-          onClick={handleToggle}
-          className={
-            "block w-full rounded border border-black px-3 py-1 text-center text-sm"
-          }
-        >
-          レシピを編集
-        </button>
-        <div className="absolute -top-10 right-0">
-          {toggleDropdown && (
-            <Dropdown
-              closeToggle={closeToggle}
-              components={
-                <MyRecipeMenu
-                  status={isPublished && "public"}
-                  handleClick={handleClick}
-                />
-              }
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <IconDotsCircleHorizontal stroke={1.5} />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuSeparator />
+            <MyRecipeMenu
+              status={isPublished && "public"}
+              handleClick={handleClick}
             />
-          )}
-        </div>
-      </div>
-    </>
+          </DropdownMenuContent>
+        </DropdownMenu>
   );
 }
