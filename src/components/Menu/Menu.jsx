@@ -15,7 +15,7 @@ export function Menu({ items }) {
                 key={index}
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
-                className="flex w-full items-center gap-x-2 px-3 py-2.5 text-gray-500 hover:bg-gray-50"
+                className="flex w-full items-center gap-x-2 bg-white px-3 py-2.5 text-gray-500 hover:bg-gray-50"
               >
                 <Icon size={16} stroke={1.5} />
                 <div className="text-sm">{item.text}</div>
@@ -31,7 +31,7 @@ export function Menu({ items }) {
               <button
                 key={index}
                 onClick={item.onClick}
-                className="flex w-full items-center gap-x-2 px-3 py-2.5 text-gray-500 hover:bg-gray-50"
+                className="flex w-full items-center gap-x-2 bg-white px-3 py-2.5 text-gray-500 hover:bg-gray-50"
               >
                 <Icon size={16} stroke={1.5} />
                 <div className="text-sm">{item.text}</div>
