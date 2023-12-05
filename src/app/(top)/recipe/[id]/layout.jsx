@@ -65,6 +65,7 @@ function RecipeDetail({
             <SnsMyRecipe
               isPublished={isPublished}
               setIsPublished={setIsPublished}
+              boolean={isEqual}
             />
           </div>
         </div>
@@ -97,12 +98,14 @@ function RecipeDetail({
 
       <div className="mt-4 flex gap-4">
         <FavoriteButton />
-        <Link
-          className="block w-full rounded border border-black px-3 py-1 text-center text-sm"
-          href={"/my-recipe/new"}
-        >
-          レシピを編集する
-        </Link>
+        {isEqual && (
+          <Link
+            className="block w-full rounded border border-black px-3 py-1 text-center text-sm"
+            href={"/my-recipe/new"}
+          >
+            レシピを編集する
+          </Link>
+        )}
       </div>
     </>
   );
